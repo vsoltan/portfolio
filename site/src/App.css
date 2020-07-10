@@ -1,0 +1,29 @@
+
+:root {
+    --light-background: #E0E0E0;
+    --lightest-background: #E9E9E9;
+}
+
+body { padding-top: 70px; }
+
+@font-face {
+    font-family: Metropolis-Light;
+    src: url(assetts/fonts/metropolis-light.woff)
+}
+
+@font-face {
+    font-family: Metropolis-Thin;
+    src: url(assetts/fonts/metropolis-thin.woff)
+}
+
+@font-face {
+    font-family: Metropolis-Regular;
+    src: url(assetts/fonts/metropolis-regular.woff)
+}
+
+@font-face {
+    font-family: Metropolis-Bold;
+    src: url(assetts/fonts/metropolis-bold.woff)
+}
+  
+a { outline: none; }
