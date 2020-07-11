@@ -2,6 +2,7 @@
 :root {
     --light-background: #E0E0E0;
     --lightest-background: #E9E9E9;
+    --highlight-color: rgb(155, 217, 236);
 }
 
 body { padding-top: 70px; }

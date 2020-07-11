@@ -1,5 +1,5 @@
 import React from 'react';
-import { Nav, Navbar } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import styled from 'styled-components';
 import '../../App.css';
 import "bootstrap/js/src/collapse.js";
@@ -37,7 +37,7 @@ const redirect = (e) => (
 const NavigationBar = () => (
   <Styles>
     <nav class="navbar navbar-expand-lg fixed-top">
-      <div className="container">
+      <Container>
         <a class="navbar-brand" href="#">vsoltan</a>
         <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -51,11 +51,11 @@ const NavigationBar = () => (
               <a class="nav-link" href="#" onClick={redirect} value={"https://www.linkedin.com/in/valeriy-soltan"}>LinkedIn</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">Hire Me</a>
+              <a class="nav-link" href="mailto:vsoltan@umass.edu">Hire Me</a>
             </li>
           </ul>
         </div>
-      </div>
+      </Container>
     </nav>
   </Styles>
 );
