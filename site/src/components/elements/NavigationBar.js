@@ -25,6 +25,10 @@ const Styles = styled.div`
       font-size: 20px;
       font-family: Metropolis-Bold;
     }
+
+    .nav-item { // to get collapse bar to the right
+      text-align: right;
+  }
 `;
 
 const redirect = (e) => (
@@ -38,7 +42,7 @@ const NavigationBar = () => (
   <Styles>
     <nav class="navbar navbar-expand-lg fixed-top">
       <Container>
-        <a class="navbar-brand" href="#">vsoltan</a>
+        <a class="navbar-brand" href="#">valeriy soltan</a>
         <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>

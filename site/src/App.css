@@ -2,10 +2,12 @@
 :root {
     --light-background: #E0E0E0;
     --lightest-background: #E9E9E9;
-    --highlight-color: rgb(155, 217, 236);
+    --highlight-color: rgb(0, 123, 255);
 }
 
-body { padding-top: 70px; }
+body {
+    padding-top: 70px; 
+}
 
 @font-face {
     font-family: Metropolis-Light;
@@ -28,3 +30,7 @@ body { padding-top: 70px; }
 }
   
 a { outline: none; }
+
+h1 {
+    font-family: Metropolis-Bold;
+}
