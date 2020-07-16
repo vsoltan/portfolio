@@ -3,6 +3,8 @@
     --light-background: #E0E0E0;
     --lightest-background: #E9E9E9;
     --highlight-color: rgb(0, 123, 255);
+    --highlight-reduced-opacity: rgba(0, 123, 255, 0.5);
+    --card-background: rgb(240, 240, 240);
 }
 
 body {

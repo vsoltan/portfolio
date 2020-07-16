@@ -18,6 +18,7 @@ const Styles = styled.div`
       font-size: 17px;
       font-family: Metropolis-Bold;
       padding: 0 1.5em 0 1.5em;
+      cursor: pointer;
     }
 
     .navbar-brand {

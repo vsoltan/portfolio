@@ -13,9 +13,6 @@ const Styles = styled.div`
     .container {
         margin-top: 5%;
     }
-    h1 {
-        margin-bottom: 3%;
-    }
     p {
         padding: 10px 0px 10px 0px;
         font-family: Metropolis-Regular;
@@ -30,11 +27,11 @@ const Styles = styled.div`
         text-decoration: none;
         position: relative;
     }
-    a:before {
+    a.link:before {
         content: "";
         position: absolute;
         width: 100%;
-        height: 1px;
+        height: 2px;
         bottom: 0;
         left: 0;
         background-color: var(--highlight-color);
@@ -43,23 +40,24 @@ const Styles = styled.div`
         transition: all 0.3s ease-in-out;
     }
 
-    a:hover:before {
+    a.link:hover:before {
         visibility: visible;
         transform: scaleX(1);
     }
     a.contact {
         margin-top: 100px;
         background-color: var(--highlight-color);
-        font-family: Metropolis-Bold;
+        font-family: Metropolis-Regular;
         color: white;
         border-radius: 10px;
-        padding: 10px 10px 10px 10px;
+        padding: 10px 15px 10px 15px;
         text-align: center;
     }
     img {
         object-fit: cover;
-        width: 100%;
-        height: 400px;
+        width: 80%;
+        height: 80%;
+        border-radius: 50% 50%;
         // margin-bottom: 10px; /* vertical gutter */
     }
     .about-gallery-grid {
@@ -73,11 +71,9 @@ const Styles = styled.div`
         // padding-left: 10px; /* gutter size */
         background-clip: padding-box;
     }
-    .img1 { border-radius: 10px; }
-    // .img1 { border-radius: 10px 0px 0px 0px; }
-    // .img3 { border-radius: 0px 10px 0px 0px; }
-    // .img2 { border-radius: 0px 0px 0px 10px; }
-    // .img4 { border-radius: 0px 0px 10px 0px; }
+    .about {
+        margin-bottom: 1.5rem;
+    }
 `;
 
 const images = [
@@ -101,16 +97,17 @@ const About = () => (
         <Container>
             <Row>
                 <Col className="col-sm">
-                    <h1>Hey, I'm Valeriy Soltan, a Firmware Intern at <a href="https://openthings.io/" target="_blank">OpenThings.</a></h1>
-                    <p>Currently working towards a B.S in Computer Science and Statistics at the University of Massachusetts—Amherst.</p>
-                    <p>Interested in the <b>how</b> behind why things work. Passionate about systems programming, numerical optimization, and building
-                        accessible software for everyone.</p>
-                    <p>Actively looking for Summer 2021 opportunities. I have a breadth of experience working in dynamic environments across embedded and mobile platforms.</p>
-                    <a className={"contact"} href="mailto:vsoltan@umass.edu">vsoltan@umass.edu</a>
+                    <h1>Hey, I'm Valeriy Soltan, a Firmware Intern at <a className="link" href="https://openthings.io/" target="_blank">OpenThings.</a></h1>
+                    <div className="about">
+                        <p>Currently working towards a B.S in Computer Science and Statistics at the University of Massachusetts—Amherst.</p>
+                        <p>Interested in the <b>how</b> behind why things work. Passionate about systems programming, numerical optimization, and building
+                            accessible software for everyone.</p>
+                        <p>Actively looking for Summer 2021 opportunities. I have a breadth of experience working in dynamic environments across embedded and mobile platforms.</p>
+                    </div>
+                    <a className={"contact"} href="mailto:vsoltan@umass.edu">reach out</a>
                 </Col>
                 <Col className="col-sm">
-                    {/* { AboutGallery() } */}
-                    {images[0]}
+                    {/* <Image src={me} className={"img-fluid"}/> */}
                 </Col>
             </Row>
             <Row>
