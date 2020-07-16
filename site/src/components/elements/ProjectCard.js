@@ -4,60 +4,53 @@ import styled from 'styled-components';
 import { Image } from 'react-bootstrap';
 import '../../App.css';
 
-const Styles = styled.div`}
-    // .project-card {
-    //     position: relative;
-    //     background-color: var(--card-background);
-    //     color: transparent;
-    //     height: 500px;
-    //     border-radius: 5px;
-    //     text-align: left;
-    //     font-family: Metropolis-Bold;
-    //     transition: all .2s ease-in;
-    // }
-    // .project-card:hover {
-    //     background-color: var(--highlight-reduced-opacity);
-    //     color: white;
-    //     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    //     opacity: 0.5;
-    // }
-    // #project-title {
-    //     position: absolute;
-    //     font-size: 20px;
-    //     padding: 0px;
-    //     margin-bottom: 0px;
-    // }
-    // #project-sub-title {
-    //     position: absolute;
-    //     font-size: 15px;
-    //     top: 25px;
-    //     font-family: Metropolis-Light;
-    // }
-    // img {
-    //     position: absolute;
-    //     top: 0;
-    //     left: 20%;
-    //     height: 80%;
-    // }
-    .box {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+const Styles = styled.div`
+    .project-card {
+        position: relative;
         background-color: var(--card-background);
-      }
-      .imgwrap {
-         width: 70%; /*or whatever you choose*/
-         margin: auto;
-      }
-      .imgwrap img {
-         display: block;
-         width: 100%;
-         max-width: 500px; /*actual image width*/
-         height: auto; /* maintain aspect ratio*/
-        //  margin: auto; /*optional centering of image*/
-        margin-top: 100px;
-        margin-bottom: 100px;
-      }
+        border-radius: 5px;
+        // color: transparent;
+        color: white;
+    }
+    .project-card:hover {
+        color: white;
+    }
+    .card-container {
+        height: 425px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card-img {
+        width: 50%;
+        height: auto;
+        max-height: 100%;
+    }
+    .overlay {
+        background-color: var(--highlight-reduced-opacity);
+        opacity: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        border-radius: 5px;
+    }
+    .overlay:hover {
+        opacity: 1;
+    }
+    .text-container {
+        position: absolute;
+        top: 0;
+    }
+    #project-title {
+        font-family: Metropolis-Bold;
+        font-size: 20px;
+        margin: 20px 0px 0px 20px;
+    }
+    #project-sub-title {
+        font-family: Metropolis-Light;
+        font-size: 15px;
+        margin: 0px 0px 0px 20px;
+    }
 `;
 
 class ProjectCard extends React.Component {
@@ -69,16 +62,14 @@ class ProjectCard extends React.Component {
     render() {
         return (
             <Styles>
-                {/* <div className={"project-card"}>
-                    <div className={"img-container"}><Image src={this.img} className={"img-fluid"}/></div>
-                    {/* <div className={"text-container"}>
+                <div className="project-card">
+                    <div className="card-container">
+                        <img className="card-img" src={this.img}/>
+                        <span className="overlay"/>
+                    </div>
+                    <div className={"text-container"}>
                         <p id={"project-title"}>{this.title[0]}</p>
                         <p id={"project-sub-title"}>{this.title[1]}</p>
-                    </div>
-                </div> */}
-                <div class="box">
-                    <div class="imgwrap">
-                        <img src={this.img}/>
                     </div>
                 </div>
             </Styles>

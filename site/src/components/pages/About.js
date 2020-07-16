@@ -58,6 +58,7 @@ const Styles = styled.div`
         width: 80%;
         height: 80%;
         border-radius: 50% 50%;
+        margin-left: auto;
         // margin-bottom: 10px; /* vertical gutter */
     }
     .about-gallery-grid {
@@ -95,7 +96,7 @@ const AboutGallery = () => (
 const About = () => (
     <Styles>
         <Container>
-            <Row>
+            <Row className="">
                 <Col className="col-sm">
                     <h1>Hey, I'm Valeriy Soltan, a Firmware Intern at <a className="link" href="https://openthings.io/" target="_blank">OpenThings.</a></h1>
                     <div className="about">
@@ -107,12 +108,8 @@ const About = () => (
                     <a className={"contact"} href="mailto:vsoltan@umass.edu">reach out</a>
                 </Col>
                 <Col className="col-sm">
-                    {/* <Image src={me} className={"img-fluid"}/> */}
+                    <Image src={me} className={"img-fluid"}/>
                 </Col>
-            </Row>
-            <Row>
-                <Col className="col-sm"></Col>
-                <Col></Col>
             </Row>
         </Container>
     </Styles>

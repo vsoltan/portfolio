@@ -4,6 +4,7 @@ import { Container } from 'react-bootstrap';
 import ProjectCard from '../elements/ProjectCard';
 import styled from 'styled-components';
 import dog from '../../assetts/images/aubri.jpg';
+import vball from '../../assetts/images/volleyball.jpg';
 import '../../App.css';
 
 const Styles = styled.div`
@@ -26,10 +27,10 @@ const Featured = () => (
         <Container>
             <h1 id={"title"}>My Work.</h1> 
             <div className={"project-feature"}>
-                <ProjectCard title={["OpenSprinkler", "Internship"]} img={dog} />
-                <ProjectCard title={["Raytracing Accelerator", "Coursework Extension"]} img={dog} />
-                <ProjectCard title={["Simple Watch", "Semester Project"]} img={dog} />
-                <ProjectCard title={["Slide Business Card", "Personal Project"]} img={dog} />
+                <ProjectCard title={["OpenSprinkler", "Internship"]} img={vball} />
+                <ProjectCard title={["Raytracing Accelerator", "Coursework Extension"]} img={vball} />
+                <ProjectCard title={["Simple Watch", "Semester Project"]} img={vball} />
+                <ProjectCard title={["Slide Business Card", "Personal Project"]} img={vball} />
             </div>
         </Container>
     </Styles>
