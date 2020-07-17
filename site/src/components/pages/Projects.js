@@ -3,13 +3,13 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import ProjectCard from '../elements/ProjectCard';
 import styled from 'styled-components';
-import dog from '../../assetts/images/aubri.jpg';
 import vball from '../../assetts/images/volleyball.jpg';
+import OPS from '../../assetts/images/project-pics/ops-tile.png';
+import RTX from '../../assetts/images/project-pics/rtx-tile.png';
 import '../../App.css';
 
 const Styles = styled.div`
     .container {
-        margin-top: 5%;
         margin-bottom: 5%;
     }
     #title {
@@ -26,9 +26,9 @@ const Featured = () => (
     <Styles>
         <Container>
             <h1 id={"title"}>My Work.</h1> 
-            <div className={"project-feature"}>
-                <ProjectCard title={["OpenSprinkler", "Internship"]} img={vball} />
-                <ProjectCard title={["Raytracing Accelerator", "Coursework Extension"]} img={vball} />
+            <div className="project-feature">
+                <ProjectCard title={["OpenSprinkler", "Internship"]} img={OPS} />
+                <ProjectCard title={["Raytracing Accelerator", "Coursework Extension"]} img={RTX} />
                 <ProjectCard title={["Simple Watch", "Semester Project"]} img={vball} />
                 <ProjectCard title={["Slide Business Card", "Personal Project"]} img={vball} />
             </div>

@@ -9,11 +9,15 @@ const Styles = styled.div`
         position: relative;
         background-color: var(--card-background);
         border-radius: 5px;
-        // color: transparent;
-        color: white;
+        color: transparent;
+        cursor: pointer;
     }
     .project-card:hover {
         color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .project-card:hover .overlay {
+        opacity: 1;
     }
     .card-container {
         height: 425px;
@@ -22,7 +26,7 @@ const Styles = styled.div`
         align-items: center;
     }
     .card-img {
-        width: 50%;
+        width: 70%;
         height: auto;
         max-height: 100%;
     }
@@ -34,21 +38,18 @@ const Styles = styled.div`
         position: absolute;
         border-radius: 5px;
     }
-    .overlay:hover {
-        opacity: 1;
-    }
     .text-container {
         position: absolute;
         top: 0;
     }
     #project-title {
         font-family: Metropolis-Bold;
-        font-size: 20px;
+        font-size: 22px;
         margin: 20px 0px 0px 20px;
     }
     #project-sub-title {
-        font-family: Metropolis-Light;
-        font-size: 15px;
+        font-family: Metropolis-Regular;
+        font-size: 18px;
         margin: 0px 0px 0px 20px;
     }
 `;
@@ -67,7 +68,7 @@ class ProjectCard extends React.Component {
                         <img className="card-img" src={this.img}/>
                         <span className="overlay"/>
                     </div>
-                    <div className={"text-container"}>
+                    <div className="text-container">
                         <p id={"project-title"}>{this.title[0]}</p>
                         <p id={"project-sub-title"}>{this.title[1]}</p>
                     </div>
