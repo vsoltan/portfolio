@@ -52,6 +52,12 @@ const Styles = styled.div`
         font-size: 18px;
         margin: 0px 0px 0px 20px;
     }
+    .scaling {
+        width: 30%;
+    }
+    .no-scale {
+        width: 70%;
+    }
 `;
 
 class ProjectCard extends React.Component {
@@ -59,13 +65,15 @@ class ProjectCard extends React.Component {
         super(props);
         this.img = props.img;
         this.title = props.title;
+        this.scale = props.scale; 
     }
     render() {
+        const scaling = this.scale ? "no-scale" : "scaling";
         return (
             <Styles>
                 <div className="project-card">
                     <div className="card-container">
-                        <img className="card-img" src={this.img}/>
+                        <img className="card-img" className={scaling} src={this.img} />
                         <span className="overlay"/>
                     </div>
                     <div className="text-container">

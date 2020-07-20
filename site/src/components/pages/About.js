@@ -9,15 +9,8 @@ import { Container, Row, Col, Image } from 'react-bootstrap';
 import '../../App.css';
 
 const Styles = styled.div`
-    .upper-container {
+    .container {
         margin-top: 5%;
-    }
-    .lower-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 2%;
-        margin-bottom: 2%;
     }
     h1 {
         margin-bottom: 1.5rem;
@@ -93,7 +86,7 @@ const Styles = styled.div`
 const About = () => (
     <Styles>
         <div id="page-top">
-            <Container className="upper-container">
+            <Container className="container">
                 <Row>
                     <Col className="col-sm">
                         <h1>Hey, I'm Valeriy Soltan, a Firmware Intern at <a className="link" href="https://openthings.io/" target="_blank">OpenThings.</a></h1>
@@ -111,9 +104,6 @@ const About = () => (
                         <p id="wrap-around">Actively looking for Summer 2021 opportunities. I have a breadth of experience working in dynamic environments across embedded and mobile platforms.</p>
                     </Col>
                 </Row>
-            </Container>
-            <Container className="lower-container">
-                <a className="contact" href="mailto:vsoltan@umass.edu">Reach Out</a>
             </Container>
         </div>
     </Styles>
