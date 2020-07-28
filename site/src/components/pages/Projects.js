@@ -25,7 +25,7 @@ const Styles = styled.div`
 `;
 
 // dynammically change the scaling: pass in prop 70 or 30 and then in the class element say 
-// style={this.props.scale + "%"}
+// style={this.props.scale + "%"}           
 const Featured = () => (
     <Styles>
         <Container>
