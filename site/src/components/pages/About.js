@@ -1,10 +1,7 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import me from '../../assetts/images/me.jpg';
-import dog from '../../assetts/images/aubri.jpg';
-import school from '../../assetts/images/umass.jpg';
-import vball from '../../assetts/images/volleyball.jpg';
+import prof from '../../assetts/images/prof.jpeg';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import '../../App.css';
 
@@ -22,7 +19,7 @@ const Styles = styled.div`
     }
     b {
         font-family: Metropolis-Bold;
-        font-size: 20px;
+        font-size: 25px;
     }
     a { 
         color: var(--highlight-color); 
@@ -83,6 +80,8 @@ const Styles = styled.div`
     }
 `;
 
+const wrappedContent = "Actively looking for Summer 2021 opportunities. I have a breadth of experience working in dynamic environments across embedded and mobile platforms.";
+
 const About = () => (
     <Styles>
         <div id="page-top">
@@ -92,16 +91,16 @@ const About = () => (
                         <h1>Hey, I'm Valeriy Soltan, a Firmware Intern at <a className="link" href="https://openthings.io/" target="_blank">OpenThings.</a></h1>
                         <div className="about">
                             <p>Currently working towards a B.S in Computer Science and Statistics at the University of Massachusetts—Amherst.</p>
-                            <p>Interested in the <b>how</b> behind why things work. Passionate about systems programming, numerical optimization, and building
+                            <p>Interested in the <b>how</b> behind why things work. Passionate about systems programming, computer architecture, and building
                                 accessible software for <b>everyone</b>.</p>
-                            <p id="wrap-display">Actively looking for Summer 2021 opportunities. I have a breadth of experience working in dynamic environments across embedded and mobile platforms.</p>
+                            <p id="wrap-display">{wrappedContent}</p>
                         </div>
                     </Col>
                     <Col className="col-sm col-images">
                         <div className="img-container">
-                            <Image src={me} className="portrait"/>
+                            <Image src={prof} className="portrait"/>
                         </div>
-                        <p id="wrap-around">Actively looking for Summer 2021 opportunities. I have a breadth of experience working in dynamic environments across embedded and mobile platforms.</p>
+                        <p id="wrap-around">{wrappedContent}</p>
                     </Col>
                 </Row>
             </Container>

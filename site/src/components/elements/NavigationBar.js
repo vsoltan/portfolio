@@ -67,7 +67,7 @@ const NavigationBar = () => (
               <a className="nav-link" onClick={redirect} value={"https://www.linkedin.com/in/valeriy-soltan"}>LinkedIn</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link last" href="mailto:vsoltan@umass.edu">Hire Me</a>
+              <a className="nav-link last" href="mailto:vsoltan@umass.edu">Contact</a>
             </li>
           </ul>
         </div>
