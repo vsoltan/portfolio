@@ -1,7 +1,8 @@
 
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Overlay } from 'react-bootstrap';
 import ProjectCard from '../elements/ProjectCard';
+import ProjectOverlay from '../elements/Overlay';
 import styled from 'styled-components';
 import OPS from '../../assetts/images/project-pics/ops-tile.png';
 import RTX from '../../assetts/images/project-pics/rtx-tile.png';
@@ -24,6 +25,27 @@ const Styles = styled.div`
     }
 `;
 
+
+const OpenSprinklerCard = () => (
+    <ProjectCard title={["OpenSprinkler", "Internship", "OpenSprinkler Dashboard"]} img={OPS} scale={1}>
+        <Overlay />
+    </ProjectCard>
+);
+
+const AcceleratorCard = () => (
+    <ProjectCard title={["Raytracing Accelerator", "Coursework Extension", "Ball Array Render"]} img={RTX} scale={1}>
+        <Overlay />
+    </ProjectCard>
+);
+
+const SimpleWatchCard = () => (
+    <ProjectCard title={["Simple Watch", "Semester Project", "Project Schematic"]} img={SW} scale={1} />
+);
+
+const SlideCard = () => (
+    <ProjectCard className="HELLO" title={["Slide Business Card", "Personal Project", "App Landing Page"]} img={SLE} scale={0} />
+);
+
 // dynammically change the scaling: pass in prop 70 or 30 and then in the class element say 
 // style={this.props.scale + "%"}           
 const Featured = () => (
@@ -31,10 +53,10 @@ const Featured = () => (
         <Container>
             <h1 id={"title"}>My Work.</h1> 
             <div className="project-feature">
-                <ProjectCard title={["OpenSprinkler", "Internship"]} img={OPS} scale={1} />
-                <ProjectCard title={["Raytracing Accelerator", "Coursework Extension"]} img={RTX} scale={1} />
-                <ProjectCard title={["Simple Watch", "Semester Project"]} img={SW} scale={1} />
-                <ProjectCard className="HELLO" title={["Slide Business Card", "Personal Project"]} img={SLE} scale={0} />
+                { OpenSprinklerCard() }
+                { AcceleratorCard() }
+                { SimpleWatchCard() }
+                { SlideCard() }
             </div>
         </Container>
     </Styles>

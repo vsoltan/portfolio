@@ -1,7 +1,9 @@
 
 import React from 'react';
+import ReactDOM from 'react-dom';
 import styled from 'styled-components';
-import { Image } from 'react-bootstrap';
+import Modal from 'react-bootstrap/Modal'
+import Button from 'react-bootstrap/Button';
 import '../../App.css';
 
 const Styles = styled.div`
@@ -60,25 +62,71 @@ const Styles = styled.div`
     }
 `;
 
+function Example() {
+    const [show, setShow] = React.useState(false);
+  
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+  
+    return (
+      <>
+        <Button variant="primary" onClick={handleShow}>
+          Launch demo modal
+        </Button>
+  
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Modal heading</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+            <Button variant="primary" onClick={handleClose}>
+              Save Changes
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      </>
+    );
+  }
+
 class ProjectCard extends React.Component {
     constructor(props) {
         super(props);
         this.img = props.img;
         this.title = props.title;
-        this.scale = props.scale; 
+        this.scale = props.scale; // change this 
+    }
+    componentDidMount() {
+        // not supported in strict mode... (use ref)
+        ReactDOM.findDOMNode(this).addEventListener("click", this.showOverlay);
+    }
+    componentWillUnmount() {
+        ReactDOM.findDOMNode(this).removeEventListener("click", this.hideOverlay);
+    }
+    showOverlay() {
+        // const cardOverlay = this.props.children; 
+        // render Example for a start!
+    }
+    hideOverlay() {
+
     }
     render() {
         const scaling = this.scale ? "no-scale" : "scaling";
+        const titleValue = this.title[0], subTitleValue = this.title[1], altValue = this.title[2];
+
         return (
             <Styles>
                 <div className="project-card">
                     <div className="card-container">
-                        <img className="card-img" className={scaling} src={this.img} />
+                        <img className="card-img" className={scaling} src={this.img} alt={altValue}/>
                         <span className="overlay"/>
                     </div>
                     <div className="text-container">
-                        <p id={"project-title"}>{this.title[0]}</p>
-                        <p id={"project-sub-title"}>{this.title[1]}</p>
+                        <p id={"project-title"}>{titleValue}</p>
+                        <p id={"project-sub-title"}>{subTitleValue}</p>
                     </div>
                 </div>
             </Styles>

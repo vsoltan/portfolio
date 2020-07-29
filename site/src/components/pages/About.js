@@ -17,10 +17,6 @@ const Styles = styled.div`
         font-size: 17px;
         padding-top: 10px;
     }
-    b {
-        font-family: Metropolis-Bold;
-        font-size: 25px;
-    }
     a { 
         color: var(--highlight-color); 
         text-decoration: none;
@@ -38,7 +34,6 @@ const Styles = styled.div`
         transform: scaleX(0);
         transition: all 0.3s ease-in-out;
     }
-
     a.link:hover:before {
         visibility: visible;
         transform: scaleX(1);
@@ -53,34 +48,31 @@ const Styles = styled.div`
     }
     .portrait {
         object-fit: cover;
-        width: 80%;
+        width: 100%;
         height: 100%;
+        box-sizing: border-box;
         max-height: 425px;
         border-radius: 5px;
     }
     .img-container {
         display: flex;
-        justify-content: right;
     }
     #wrap-around {
         display: none;
     }
-    @media screen and (min-width: 0px) and (max-width: 500px) {
+    @media screen and (min-width: 0px) and (max-width: 767px) {
         .col-images { display: none; }  /* hide images on small screens */
     }
-    @media screen and (min-width: 501px) and (max-width: 767px) {
+    @media screen and (min-width: 501px) and (max-width: 991px) {
         #wrap-display { display: none; }
         #wrap-around { 
             display: block;
             padding-top: 1.5em; 
         }
-        img {
-            width: 100%;
-        }
     }
 `;
 
-const wrappedContent = "Actively looking for Summer 2021 opportunities. I have a breadth of experience working in dynamic environments across embedded and mobile platforms.";
+const wrappedContent = "Actively looking for Summer 2021 opportunities: I have a breadth of experience working in dynamic environments across embedded and mobile platforms.";
 
 const About = () => (
     <Styles>
@@ -88,11 +80,11 @@ const About = () => (
             <Container className="container">
                 <Row>
                     <Col className="col-sm">
-                        <h1>Hey, I'm Valeriy Soltan, a Firmware Intern at <a className="link" href="https://openthings.io/" target="_blank">OpenThings.</a></h1>
+                        <h1>Hey, I'm Valeriy Soltan, a Firmware Intern at <a className="link" href="https://openthings.io/" target="_blank" rel="noopener noreferrer">OpenThings.</a></h1>
                         <div className="about">
                             <p>Currently working towards a B.S in Computer Science and Statistics at the University of Massachusetts—Amherst.</p>
-                            <p>Interested in the <b>how</b> behind why things work. Passionate about systems programming, computer architecture, and building
-                                accessible software for <b>everyone</b>.</p>
+                            <p>Interested in deconstructing the way things work. Passionate about systems programming, computer architecture, and building
+                                robust solutions to problems.</p>
                             <p id="wrap-display">{wrappedContent}</p>
                         </div>
                     </Col>
