@@ -82,3 +82,22 @@ p {
     font-family: Metropolis-Regular;
 }
 
+.e1 {
+    background-color: red;
+    height: 200px;
+}
+.e2 {
+    background-color: blue;
+    height: 200px;
+}
+
+.project-gallery {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+    grid-gap: 20px;
+}
+
+.gallery-item { 
+    border-radius: 5px;
+}
+

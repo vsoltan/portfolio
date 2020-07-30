@@ -1,9 +1,10 @@
 
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Image } from 'react-bootstrap';
 import styled from 'styled-components';
 
 import ProjectCard from '../elements/ProjectCard';
+import ImageGallery from '../elements/ImageGallery';
 
 // tile images 
 import OPS from '../../assetts/images/project-pics/ops-tile.png';
@@ -12,6 +13,7 @@ import SW from '../../assetts/images/project-pics/sw-tile.png';
 import SLE from '../../assetts/images/project-pics/slide-tile.png';
 
 // overlay image collections 
+import board from '../../assetts/images/project-pics/board.png';
 
 
 import '../../App.css';
@@ -78,8 +80,11 @@ function SimpleWatchCard() {
         "Project Schematic",
     ];
     const overlayContent = (
-        <div>
-            <p>watch</p>
+        <div className="project-gallery">
+            <Image src={board} className="img-fluid gallery-item"/>
+            <Image src={board} className="img-fluid gallery-item"/>
+            <Image src={board} className="img-fluid gallery-item"/>
+            <Image src={board} className="img-fluid gallery-item"/>
         </div>
     );
     const WatchOverlay = [
