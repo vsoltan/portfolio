@@ -14,6 +14,11 @@ import SLE from '../../assetts/images/project-pics/slide-tile.png';
 
 // overlay image collections 
 import board from '../../assetts/images/project-pics/board.png';
+import watchApp from '../../assetts/images/project-pics/watch-app.jpeg';
+import watchMusic from '../../assetts/images/project-pics/watch-music.jpeg';
+import watchTimer from '../../assetts/images/project-pics/watch-timer.jpeg';
+import watchWear from '../../assetts/images/project-pics/watch-wear.jpeg';
+
 
 
 import '../../App.css';
@@ -49,7 +54,7 @@ function OpenSprinklerCard() {
         "https://github.com/OpenSprinkler/OpenSprinkler-Firmware", 
     ];
     return (
-        <ProjectCard title={OSTitle} img={OPS} scale={1} overlayData={OSOverlay}/>
+        <ProjectCard title={OSTitle} img={OPS} scale={75} overlayData={OSOverlay}/>
     );
 }
 
@@ -69,7 +74,7 @@ function AcceleratorCard() {
         "https://github.com/vsoltan/CS-373/tree/master/CS373HW7",
     ];
     return (
-        <ProjectCard title={AccTitle} img={RTX} scale={1} overlayData={AccOverlay}/>
+        <ProjectCard title={AccTitle} img={RTX} scale={75} overlayData={AccOverlay}/>
     );
 }
 
@@ -80,19 +85,24 @@ function SimpleWatchCard() {
         "Project Schematic",
     ];
     const overlayContent = (
-        <div className="project-gallery">
-            <Image src={board} className="img-fluid gallery-item"/>
-            <Image src={board} className="img-fluid gallery-item"/>
-            <Image src={board} className="img-fluid gallery-item"/>
-            <Image src={board} className="img-fluid gallery-item"/>
-        </div>
+        <React.Fragment>
+            <div className="project-gallery">
+                <Image src={watchWear} className="img-fluid gallery-item"/>
+                <Image src={watchMusic} className="img-fluid gallery-item"/>
+                <Image src={watchTimer} className="img-fluid gallery-item"/>
+                <Image src={watchApp} className="img-fluid gallery-item"/>
+            </div>
+            <div className="project-description">
+                <p></p>
+            </div>
+        </React.Fragment>
     );
     const WatchOverlay = [
         overlayContent,
         "https://github.com/vsoltan/SimpleOS",
     ];
     return (
-        <ProjectCard title={WatchTitle} img={SW} scale={1} overlayData={WatchOverlay} />
+        <ProjectCard title={WatchTitle} img={board} scale={50} overlayData={WatchOverlay} />
     );
 }
 
@@ -112,7 +122,7 @@ function SlideCard() {
         "https://github.com/vsoltan/Slide",
     ];
     return (
-        <ProjectCard title={SlideTitle} img={SLE} scale={0} overlayData={SlideOverlay}/>
+        <ProjectCard title={SlideTitle} img={SLE} scale={30} overlayData={SlideOverlay}/>
     )
 } 
 

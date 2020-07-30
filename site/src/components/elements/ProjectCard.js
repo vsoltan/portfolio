@@ -2,7 +2,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import Modal from 'react-bootstrap/Modal'
-import { SocialIcon } from 'react-social-icons';
+import Button from 'react-bootstrap/Button';
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import '../../App.css';
 
 const Styles = styled.div`
@@ -27,7 +30,6 @@ const Styles = styled.div`
         align-items: center;
     }
     .card-img {
-        width: 70%;
         height: auto;
         max-height: 100%;
     }
@@ -53,12 +55,6 @@ const Styles = styled.div`
         font-size: 18px;
         margin: 0px 0px 0px 20px;
     }
-    .scaling {
-        width: 30%;
-    }
-    .no-scale {
-        width: 70%;
-    }
 `;
 
 class ProjectCard extends React.Component {
@@ -66,14 +62,13 @@ class ProjectCard extends React.Component {
         super(props);
         this.img = props.img;
         this.title = props.title;
-        this.scale = props.scale; // change this 
+        this.scale = props.scale;
         this.state = {
             overlayState: false,
         };
         this.overlayData = props.overlayData;
     }
     showOverlay = () => (
-        // const cardOverlay = this.props.children; 
         this.setState({ overlayState : true})
     )
     hideOverlay = () => (
@@ -86,19 +81,17 @@ class ProjectCard extends React.Component {
         )
     );
     render() {
-        const scaling = this.scale ? "no-scale" : "scaling";
         const titleValue = this.title[0], 
-            subTitleValue = this.title[1], 
-            altValue = this.title[2];
+              subTitleValue = this.title[1], 
+              altValue = this.title[2];
 
-        const overlayBody = this.overlayData[0], 
-            overlayRedirectURL = this.overlayData[1];
+        const overlayBody = this.overlayData[0];
 
         return (
             <Styles>
                 <div className="project-card" onClick={this.showOverlay}>
                     <div className="card-container">
-                        <img className="card-img" className={scaling} src={this.img} alt={altValue}/>
+                        <img className="card-img" src={this.img} alt={altValue} style={{width: this.scale + "%"}}/>
                         <span className="overlay"/>
                     </div>
                     <div className="text-container">
@@ -113,10 +106,15 @@ class ProjectCard extends React.Component {
                             <h2>{subTitleValue}</h2>
                         </Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>{overlayBody}</Modal.Body>
-                    <Modal.Footer>
-                        <SocialIcon url={overlayRedirectURL} target="_blank" bgColor="#000000"/>
-                    </Modal.Footer>
+                    <Modal.Body>
+                        {overlayBody}
+                        <Button variant="primary" className="float-right" onClick={this.redirect}>
+                            <div className="btn-content">
+                                <FontAwesomeIcon icon={faGithub} className="github-icon"/>
+                                <a className="src-link">src</a>
+                            </div>
+                        </Button>
+                    </Modal.Body>    
                 </Modal>
             </Styles>
         );
