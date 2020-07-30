@@ -13,8 +13,6 @@ const Styles = styled.div`
         margin-bottom: 1.5rem;
     }
     p {
-        font-family: Metropolis-Regular;
-        font-size: 17px;
         padding-top: 10px;
     }
     a { 
@@ -61,9 +59,11 @@ const Styles = styled.div`
         display: none;
     }
     @media screen and (min-width: 0px) and (max-width: 767px) {
+        #wrap-display { display: block; }
         .col-images { display: none; }  /* hide images on small screens */
+        
     }
-    @media screen and (min-width: 501px) and (max-width: 991px) {
+    @media screen and (min-width: 768px) and (max-width: 991px) {
         #wrap-display { display: none; }
         #wrap-around { 
             display: block;

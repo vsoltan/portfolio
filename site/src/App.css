@@ -3,6 +3,7 @@
     --light-background: #E0E0E0;
     --lightest-background: #E9E9E9;
     --highlight-color: rgb(0, 123, 255);
+    --light-text-color: rgb(140, 140, 140);
     --highlight-reduced-opacity: rgba(0, 123, 255, 0.3);
     --card-background: rgb(240, 240, 240);
 }
@@ -31,8 +32,53 @@ body {
     src: url(assetts/fonts/metropolis-bold.woff)
 }
   
-a { outline: none; }
+a { 
+    outline: none; 
+}
 
 h1 {
     font-family: Metropolis-Bold;
 }
+
+h2 {
+    font-family: Metropolis-Regular;
+}
+
+p {
+    font-family: Metropolis-Regular;
+    font-size: 17px;
+}
+
+/* overlay styling */
+
+.fade.modal-backdrop.show {
+    opacity: 0.75;
+}
+
+.modal-title h1 {
+    color: var(--highlight-color);
+    font-size: 30px;
+}
+
+.modal-title h2 {
+    color: var(--light-text-color);
+    font-size: 20px;
+}
+
+.modal-header {
+    border-bottom: 0 none;
+}
+
+.modal-footer {
+    border-top: 0 none;
+}
+
+.modal-content {
+    border-radius: 10px;
+}
+
+.btn-primary {
+    background-color: var(--highlight-color);
+    font-family: Metropolis-Regular;
+}
+

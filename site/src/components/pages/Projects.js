@@ -1,13 +1,19 @@
 
 import React from 'react';
-import { Container, Overlay } from 'react-bootstrap';
-import ProjectCard from '../elements/ProjectCard';
-import ProjectOverlay from '../elements/Overlay';
+import { Container } from 'react-bootstrap';
 import styled from 'styled-components';
+
+import ProjectCard from '../elements/ProjectCard';
+
+// tile images 
 import OPS from '../../assetts/images/project-pics/ops-tile.png';
 import RTX from '../../assetts/images/project-pics/rtx-tile.png';
 import SW from '../../assetts/images/project-pics/sw-tile.png';
 import SLE from '../../assetts/images/project-pics/slide-tile.png';
+
+// overlay image collections 
+
+
 import '../../App.css';
 
 const Styles = styled.div`
@@ -25,26 +31,85 @@ const Styles = styled.div`
     }
 `;
 
+function OpenSprinklerCard() {
+    const OSTitle = [
+        "OpenSprinkler", 
+        "Internship", 
+        "OpenSprinkler Dashboard"
+    ];
+    const overlayContent = (
+        <div>
+            <p>hello</p>
+        </div>
+    );
+    const OSOverlay = [
+        overlayContent, 
+        "https://github.com/OpenSprinkler/OpenSprinkler-Firmware", 
+    ];
+    return (
+        <ProjectCard title={OSTitle} img={OPS} scale={1} overlayData={OSOverlay}/>
+    );
+}
 
-const OpenSprinklerCard = () => (
-    <ProjectCard title={["OpenSprinkler", "Internship", "OpenSprinkler Dashboard"]} img={OPS} scale={1}>
-        <Overlay />
-    </ProjectCard>
-);
+function AcceleratorCard() {
+    const AccTitle = [
+        "Raytracing Accelerator", 
+        "Coursework Extension", 
+        "Ball Array Render"
+    ];
+    const overlayContent = (
+        <div>
+            <p>yo</p>
+        </div>
+    );
+    const AccOverlay = [
+        overlayContent,
+        "https://github.com/vsoltan/CS-373/tree/master/CS373HW7",
+    ];
+    return (
+        <ProjectCard title={AccTitle} img={RTX} scale={1} overlayData={AccOverlay}/>
+    );
+}
 
-const AcceleratorCard = () => (
-    <ProjectCard title={["Raytracing Accelerator", "Coursework Extension", "Ball Array Render"]} img={RTX} scale={1}>
-        <Overlay />
-    </ProjectCard>
-);
+function SimpleWatchCard() {
+    const WatchTitle = [
+        "Simple Watch",
+        "Semester Project",
+        "Project Schematic",
+    ];
+    const overlayContent = (
+        <div>
+            <p>watch</p>
+        </div>
+    );
+    const WatchOverlay = [
+        overlayContent,
+        "https://github.com/vsoltan/SimpleOS",
+    ];
+    return (
+        <ProjectCard title={WatchTitle} img={SW} scale={1} overlayData={WatchOverlay} />
+    );
+}
 
-const SimpleWatchCard = () => (
-    <ProjectCard title={["Simple Watch", "Semester Project", "Project Schematic"]} img={SW} scale={1} />
-);
-
-const SlideCard = () => (
-    <ProjectCard className="HELLO" title={["Slide Business Card", "Personal Project", "App Landing Page"]} img={SLE} scale={0} />
-);
+function SlideCard() {
+    const SlideTitle = [
+        "Slide Business Card", 
+        "Personal Project", 
+        "App Landing Page"
+    ];
+    const overlayContent = (
+        <div>
+            <p>slide</p>
+        </div>
+    );
+    const SlideOverlay = [
+        overlayContent, 
+        "https://github.com/vsoltan/Slide",
+    ];
+    return (
+        <ProjectCard title={SlideTitle} img={SLE} scale={0} overlayData={SlideOverlay}/>
+    )
+} 
 
 // dynammically change the scaling: pass in prop 70 or 30 and then in the class element say 
 // style={this.props.scale + "%"}           

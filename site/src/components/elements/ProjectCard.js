@@ -1,9 +1,8 @@
 
 import React from 'react';
-import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 import Modal from 'react-bootstrap/Modal'
-import Button from 'react-bootstrap/Button';
+import { SocialIcon } from 'react-social-icons';
 import '../../App.css';
 
 const Styles = styled.div`
@@ -62,64 +61,42 @@ const Styles = styled.div`
     }
 `;
 
-function Example() {
-    const [show, setShow] = React.useState(false);
-  
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-  
-    return (
-      <>
-        <Button variant="primary" onClick={handleShow}>
-          Launch demo modal
-        </Button>
-  
-        <Modal show={show} onHide={handleClose}>
-          <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-              Close
-            </Button>
-            <Button variant="primary" onClick={handleClose}>
-              Save Changes
-            </Button>
-          </Modal.Footer>
-        </Modal>
-      </>
-    );
-  }
-
 class ProjectCard extends React.Component {
     constructor(props) {
         super(props);
         this.img = props.img;
         this.title = props.title;
         this.scale = props.scale; // change this 
+        this.state = {
+            overlayState: false,
+        };
+        this.overlayData = props.overlayData;
     }
-    componentDidMount() {
-        // not supported in strict mode... (use ref)
-        ReactDOM.findDOMNode(this).addEventListener("click", this.showOverlay);
-    }
-    componentWillUnmount() {
-        ReactDOM.findDOMNode(this).removeEventListener("click", this.hideOverlay);
-    }
-    showOverlay() {
+    showOverlay = () => (
         // const cardOverlay = this.props.children; 
-        // render Example for a start!
-    }
-    hideOverlay() {
-
-    }
+        this.setState({ overlayState : true})
+    )
+    hideOverlay = () => (
+        this.setState({ overlayState : false })
+    )
+    redirect = () => (
+        window.open(
+            this.overlayData[1],
+            '_blank',
+        )
+    );
     render() {
         const scaling = this.scale ? "no-scale" : "scaling";
-        const titleValue = this.title[0], subTitleValue = this.title[1], altValue = this.title[2];
+        const titleValue = this.title[0], 
+            subTitleValue = this.title[1], 
+            altValue = this.title[2];
+
+        const overlayBody = this.overlayData[0], 
+            overlayRedirectURL = this.overlayData[1];
 
         return (
             <Styles>
-                <div className="project-card">
+                <div className="project-card" onClick={this.showOverlay}>
                     <div className="card-container">
                         <img className="card-img" className={scaling} src={this.img} alt={altValue}/>
                         <span className="overlay"/>
@@ -129,6 +106,18 @@ class ProjectCard extends React.Component {
                         <p id={"project-sub-title"}>{subTitleValue}</p>
                     </div>
                 </div>
+                <Modal size ="lg" scrollable={true} show={this.state.overlayState} onHide={this.hideOverlay}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>
+                            <h1>{titleValue}</h1>
+                            <h2>{subTitleValue}</h2>
+                        </Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>{overlayBody}</Modal.Body>
+                    <Modal.Footer>
+                        <SocialIcon url={overlayRedirectURL} target="_blank" bgColor="#000000"/>
+                    </Modal.Footer>
+                </Modal>
             </Styles>
         );
     }
