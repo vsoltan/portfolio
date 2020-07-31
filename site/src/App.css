@@ -32,9 +32,9 @@ body {
     src: url(assetts/fonts/metropolis-bold.woff)
 }
   
-a { 
+/* a { 
     outline: none; 
-}
+} */
 
 h1 {
     font-family: Metropolis-Bold;
@@ -49,6 +49,10 @@ p {
     font-size: 17px;
 }
 
+p:last-of-type {
+    margin-bottom: 0px;
+}
+
 /* overlay styling */
 
 .fade.modal-backdrop.show {
@@ -59,7 +63,6 @@ p {
     color: var(--highlight-color);
     font-size: 30px;
     margin-bottom: 0px;
-    margin-top: 5px;
 }
 
 .modal-title h2 {
@@ -69,32 +72,37 @@ p {
 
 .modal-header {
     border-bottom: 0 none;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-top: 1rem;
 }
 
 .modal-footer {
     border-top: 0 none;
 }
 
-.modal-content {
-    /* border-radius: 10px; */
-}
-
 .modal-body {
     padding-top: 0rem;
     padding-bottom: 0rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .btn-primary {
-    background-color: black;
-    border-color: black;
-    font-family: Metropolis-Regular;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
+    font-family: Metropolis-Regular;
 }
 
-.btn-primary:hover {
+.btn-primary.src {
     background-color: black;
     border-color: black;
+}
+
+.btn-primary.demo {
+    background-color: var(--highlight-color);
+    border-color: var(--highlight-color);
+    margin-right: 10px;
 }
 
 .btn-content {
@@ -102,10 +110,14 @@ p {
     align-items: center;
 }
 
+.btn-demo {
+    background-color: var(--highlight-reduced-opacity);
+}
+
 .github-icon {
     display: flex;
     margin-right: 10px;
-    font-size: 25px;
+    font-size: 24px;
 }
 
 .src-link {
@@ -124,5 +136,19 @@ p {
 
 .project-description {
     margin-top: 1.5em;
+}
+
+.close {
+    padding-right: 0px;
+}
+
+a { 
+    color: var(--highlight-color); 
+    text-decoration: none;
+    position: relative;
+}
+a.link:hover {
+    color: var(--highlight-reduced-opacity);
+    text-decoration: none;
 }
 

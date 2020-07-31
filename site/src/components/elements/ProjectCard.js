@@ -63,6 +63,7 @@ class ProjectCard extends React.Component {
         this.img = props.img;
         this.title = props.title;
         this.scale = props.scale;
+        this.demoLink = props.demoLink;
         this.state = {
             overlayState: false,
         };
@@ -80,6 +81,14 @@ class ProjectCard extends React.Component {
             '_blank',
         )
     );
+    redirectDemo = () => (
+        window.open(
+            this.demoLink,
+            '_blank',
+        )
+    )
+
+    // TODO: figure out src button placement
     render() {
         const titleValue = this.title[0], 
               subTitleValue = this.title[1], 
@@ -108,11 +117,14 @@ class ProjectCard extends React.Component {
                     </Modal.Header>
                     <Modal.Body>
                         {overlayBody}
-                        <Button variant="primary" className="float-right" onClick={this.redirect}>
+                        <Button variant="primary" className="float-right src" onClick={this.redirect}>
                             <div className="btn-content">
                                 <FontAwesomeIcon icon={faGithub} className="github-icon"/>
                                 <a className="src-link">src</a>
                             </div>
+                        </Button>
+                        <Button variant="primary" className="float-right demo" onClick={this.redirectDemo} style={{display: (this.demoLink ? 'block' : 'none')}}>
+                            <a>Demo</a>
                         </Button>
                     </Modal.Body>    
                 </Modal>

@@ -15,35 +15,6 @@ const Styles = styled.div`
     p {
         padding-top: 10px;
     }
-    a { 
-        color: var(--highlight-color); 
-        text-decoration: none;
-        position: relative;
-    }
-    a.link:before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: var(--highlight-color);
-        visibility: hidden;
-        transform: scaleX(0);
-        transition: all 0.3s ease-in-out;
-    }
-    a.link:hover:before {
-        visibility: visible;
-        transform: scaleX(1);
-    }
-    a.contact {
-        background-color: var(--highlight-color);
-        font-family: Metropolis-Bold;
-        color: white;
-        border-radius: 10px;
-        padding: 10px 25px 10px 25px;
-        text-align: center;
-    }
     .portrait {
         object-fit: cover;
         width: 100%;
