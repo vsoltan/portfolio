@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.1e6015f2.chunk.css",
+    "main.js": "/portfolio/static/js/main.932d288a.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.932d288a.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.d7e2f213.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.d7e2f213.js.map",
+    "static/js/2.1718ae17.chunk.js": "/portfolio/static/js/2.1718ae17.chunk.js",
+    "static/js/2.1718ae17.chunk.js.map": "/portfolio/static/js/2.1718ae17.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "precache-manifest.6b86380c847076070b3a44f6951f3e35.js": "/portfolio/precache-manifest.6b86380c847076070b3a44f6951f3e35.js",
+    "service-worker.js": "/portfolio/service-worker.js",
+    "static/css/main.1e6015f2.chunk.css.map": "/portfolio/static/css/main.1e6015f2.chunk.css.map",
+    "static/js/2.1718ae17.chunk.js.LICENSE.txt": "/portfolio/static/js/2.1718ae17.chunk.js.LICENSE.txt",
+    "static/media/ball-array.png": "/portfolio/static/media/ball-array.1697b9c5.png",
+    "static/media/ball-shadow.png": "/portfolio/static/media/ball-shadow.4979bd21.png",
+    "static/media/board.png": "/portfolio/static/media/board.32c40d6f.png",
+    "static/media/cow-acceled.png": "/portfolio/static/media/cow-acceled.1a103d6d.png",
+    "static/media/App.css": "/portfolio/static/media/metropolis-thin.8ae149da.woff",
+    "static/media/ops-tile.png": "/portfolio/static/media/ops-tile.8b4d139a.png",
+    "static/media/prof.jpeg": "/portfolio/static/media/prof.a2772c68.jpeg",
+    "static/media/rtx-tile.png": "/portfolio/static/media/rtx-tile.143f07e9.png",
+    "static/media/slide-config.png": "/portfolio/static/media/slide-config.dbe662fd.png",
+    "static/media/slide-qr.png": "/portfolio/static/media/slide-qr.8f983faf.png",
+    "static/media/slide-tile.png": "/portfolio/static/media/slide-tile.8d502578.png",
+    "static/media/teapot.png": "/portfolio/static/media/teapot.fd3b7464.png",
+    "static/media/watch-app.jpeg": "/portfolio/static/media/watch-app.d108d188.jpeg",
+    "static/media/watch-music.jpeg": "/portfolio/static/media/watch-music.34999225.jpeg",
+    "static/media/watch-timer.jpeg": "/portfolio/static/media/watch-timer.52e48d32.jpeg",
+    "static/media/watch-wear.jpeg": "/portfolio/static/media/watch-wear.50dec4d4.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d7e2f213.js",
+    "static/js/2.1718ae17.chunk.js",
+    "static/css/main.1e6015f2.chunk.css",
+    "static/js/main.932d288a.chunk.js"
+  ]
+}
