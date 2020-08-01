@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4d5f08789ff99b1cc94b50b2849b67b9",
+    "revision": "2adb7073aaf08ce0f5519b53c8e4d2a6",
     "url": "/portfolio/index.html"
   },
   {
-    "revision": "7bb2cc24169e9f5bfc22",
+    "revision": "8a6d73282a08252b5dcf",
     "url": "/portfolio/static/css/main.1e6015f2.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/js/2.1718ae17.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7bb2cc24169e9f5bfc22",
-    "url": "/portfolio/static/js/main.e1bdc566.chunk.js"
+    "revision": "8a6d73282a08252b5dcf",
+    "url": "/portfolio/static/js/main.38da2f7c.chunk.js"
   },
   {
     "revision": "4630d88b084dbda85285",
@@ -85,18 +85,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "d108d1883aa0bca3fb287c9e661a0443",
-    "url": "/portfolio/static/media/watch-app.d108d188.jpeg"
+    "url": "/portfolio/static/media/watch-app.d108d188.png"
   },
   {
     "revision": "34999225e2e09b142de7c51d303da218",
-    "url": "/portfolio/static/media/watch-music.34999225.jpeg"
+    "url": "/portfolio/static/media/watch-music.34999225.png"
   },
   {
     "revision": "52e48d32fac50b2f5d83c6f68d5fe785",
-    "url": "/portfolio/static/media/watch-timer.52e48d32.jpeg"
+    "url": "/portfolio/static/media/watch-timer.52e48d32.png"
   },
   {
     "revision": "50dec4d4339662b2176e836edc43fbc3",
-    "url": "/portfolio/static/media/watch-wear.50dec4d4.jpeg"
+    "url": "/portfolio/static/media/watch-wear.50dec4d4.png"
   }
 ]);
