@@ -36,11 +36,18 @@ const Styles = styled.div`
     #title {
         margin-bottom: 1.5rem;
     }
+
     .project-feature {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
         grid-gap: 20px;
     }
+    @media screen and (min-width: 320px) and (max-width: 449px) {
+        .project-feature {
+            grid-template-columns: 1fr;
+        }
+    }
+
 `;
 
 function OpenSprinklerCard() {
