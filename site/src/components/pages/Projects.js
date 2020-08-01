@@ -4,27 +4,29 @@ import { Container, Image } from 'react-bootstrap';
 import styled from 'styled-components';
 
 import ProjectCard from '../elements/ProjectCard';
-import ImageGallery from '../elements/ImageGallery';
 
 // tile images 
-import OPS from '../../assetts/images/project-pics/ops-tile.png';
-import RTX from '../../assetts/images/project-pics/rtx-tile.png';
-import SW from '../../assetts/images/project-pics/sw-tile.png';
-import SLE from '../../assetts/images/project-pics/slide-tile.png';
+import OPS from '../../assetts/images/project-pics/opensprinkler/ops-tile.png';
+import RTX from '../../assetts/images/project-pics/accel/rtx-tile.png';
+import SLI from '../../assetts/images/project-pics/slide/slide-tile.png';
 
 // overlay image collections 
-import board from '../../assetts/images/project-pics/board.png';
-import watchApp from '../../assetts/images/project-pics/watch-app.jpeg';
-import watchMusic from '../../assetts/images/project-pics/watch-music.jpeg';
-import watchTimer from '../../assetts/images/project-pics/watch-timer.jpeg';
-import watchWear from '../../assetts/images/project-pics/watch-wear.jpeg';
+import board from '../../assetts/images/project-pics/watch/board.png';
+import watchApp from '../../assetts/images/project-pics/watch/watch-app.jpeg';
+import watchMusic from '../../assetts/images/project-pics/watch/watch-music.jpeg';
+import watchTimer from '../../assetts/images/project-pics/watch/watch-timer.jpeg';
+import watchWear from '../../assetts/images/project-pics/watch/watch-wear.jpeg';
 
-import ballShadow from '../../assetts/images/project-pics/ball-shadow.png';
-import cowAccel from '../../assetts/images/project-pics/cow-acceled.png';
-import teapot from '../../assetts/images/project-pics/teapot.png';
-import ballAray from '../../assetts/images/project-pics/ball-array.png';
+import ballShadow from '../../assetts/images/project-pics/accel/ball-shadow.png';
+import cowAccel from '../../assetts/images/project-pics/accel/cow-acceled.png';
+import teapot from '../../assetts/images/project-pics/accel/teapot.png';
+import ballAray from '../../assetts/images/project-pics/accel/ball-array.png';
+
+import slideConfig from '../../assetts/images/project-pics/slide/slide-config.png';
+import slideQR from '../../assetts/images/project-pics/slide/slide-qr.png';
 
 import '../../App.css';
+import '../../Overlay.css';
 
 const Styles = styled.div`
     .container {
@@ -119,7 +121,6 @@ function SimpleWatchCard() {
     );
 }
 
-//cow accelerated: 25 lighting sources, 1000 triangle model, 4x4 grid supersampling: numcomparisons: 1645216850, time to trace: 21.5 minutes
 function AcceleratorCard() {
     const AccTitle = [
         "Raytracing Accelerator", 
@@ -173,22 +174,45 @@ function SlideCard() {
         "Personal Project", 
         "App Landing Page"
     ];
+    // https://app-mockup.com/ios/# to create image
     const overlayContent = (
-        <div>
-            <p>slide</p>
-        </div>
+        <React.Fragment>
+            <div className="project-gallery">
+                <Image src={slideConfig} className="img-fluid gallery-item"/>
+                <Image src={slideQR} className="img-fluid gallery-item"/>
+            </div>
+            <div className="project-description">
+                <p>
+                    After my first year in university, a group of my friends and I decided to spend the summer creating a mobile 
+                    application with the goal of simplifying the process of sharing social media and personal information. We envisioned an application 
+                    that would seamlessly encode your emails, social media profiles, even resumes into one easy-to-share code.
+                </p>
+                <p>
+                    Since this was our first time developing for mobile, we had to clear a large learning curve before we could translate the nuances
+                    of our idea to the actual project. Starting with storyboards and Youtube tutorials we created the fundamental components of 
+                    the application: a QR scanner, segues between views, and the general layout of a login page. As we became more comfortable, we 
+                    started building out the backend using Firebase, adding alternative forms of authentication through Google and Facebook, and fleshing 
+                    out the general functionality of the app: JSON encoding/decoding, data retrieval, and contact creation upon scanning a code. At this
+                    point, I decided to refactor the entire project to follow the Model-View-Controller (MVC) design pattern and while rewriting a large chunk
+                    of the project code, opted to ditch storyboards in favor of a programmatic approach. 
+                </p>
+                <p>
+                    Although the end result fell short of our initial expectations, I learned a lot about version control, asynchronous programming, 
+                    and design methodology. In fact, we recently decided to give the app another shot using flutter, with a more cohesive direction, 
+                    multi-platform support, and a lot more experience under our belts.
+                </p>
+            </div>
+        </React.Fragment>
     );
     const SlideOverlay = [
         overlayContent, 
         "https://github.com/vsoltan/Slide",
     ];
     return (
-        <ProjectCard title={SlideTitle} img={SLE} scale={30} overlayData={SlideOverlay}/>
+        <ProjectCard title={SlideTitle} img={SLI} scale={30} overlayData={SlideOverlay}/>
     )
 } 
-
-// dynammically change the scaling: pass in prop 70 or 30 and then in the class element say 
-// style={this.props.scale + "%"}           
+    
 const Featured = () => (
     <Styles>
         <Container>

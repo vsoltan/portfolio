@@ -7,6 +7,7 @@ import '../../App.css';
 const Styles = styled.div`
     p {
         font-family: Metropolis-Thin;
+        margin-bottom: 1.5rem;
     }
 `;
 
@@ -14,7 +15,6 @@ const Footer = () => (
     <Styles>
         <Container>
             <p>Made with React, Bootstrap, and CSS.</p>
-            <p>A special thank you to Evgeni Belin for his passion for learning, mentorship, and lectures on all sorts of interesting things.</p>
         </Container>
     </Styles>
 )

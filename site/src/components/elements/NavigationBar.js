@@ -34,7 +34,7 @@ const Styles = styled.div`
     }
     @media screen and (min-width: 0px) and (max-width: 991px) {
       .nav-link.last { 
-        padding-right: 1.5em;
+        padding-right: 1.5rem;
       }
     }
 `;
