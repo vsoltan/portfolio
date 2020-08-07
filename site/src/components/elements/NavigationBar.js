@@ -117,7 +117,7 @@ class NavigationBar extends React.Component {
 										<Button className="float-right" id="email-app-button">
 											<a href="mailto:vsoltan@umass.edu">Open in App</a>
 										</Button>
-										<Button className="float-right">Copy</Button>
+										<Button className="float-right" onClick={() => {navigator.clipboard.writeText("vsoltan@umass.edu")}}>Copy</Button>
 										{/* <OverlayTrigger overlay={(<Tooltip id="hi">Copied to Clipboard!</Tooltip>)} trigger={"click"} placement="left">
 											<Button className="float-right" onClick={() => {navigator.clipboard.writeText("vsoltan@umass.edu")}}>Copy</Button>
 										</OverlayTrigger> */}
