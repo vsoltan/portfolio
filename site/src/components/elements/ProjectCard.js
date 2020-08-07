@@ -15,6 +15,7 @@ const Styles = styled.div`
         border-radius: 5px;
         color: transparent;
         cursor: pointer;
+        width: 100%;
     }
     .project-card:hover {
         color: white;
@@ -65,15 +66,15 @@ class ProjectCard extends React.Component {
         this.scale = props.scale;
         this.demoLink = props.demoLink;
         this.state = {
-            overlayState: false,
+            overlayVisible: false,
         };
         this.overlayData = props.overlayData;
     }
     showOverlay = () => (
-        this.setState({ overlayState : true})
+        this.setState({ overlayVisible : true})
     )
     hideOverlay = () => (
-        this.setState({ overlayState : false })
+        this.setState({ overlayVisible : false })
     )
     redirect = () => (
         window.open(
@@ -108,7 +109,7 @@ class ProjectCard extends React.Component {
                         <p id={"project-sub-title"}>{subTitleValue}</p>
                     </div>
                 </div>
-                <Modal size ="lg" scrollable={true} show={this.state.overlayState} onHide={this.hideOverlay}>
+                <Modal size ="lg" scrollable={true} show={this.state.overlayVisible} onHide={this.hideOverlay}>
                     <Modal.Header closeButton>
                         <Modal.Title>
                             <h1>{titleValue}</h1>

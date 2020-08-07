@@ -86,3 +86,20 @@
     padding-right: 0px;
 }
 
+#email-text {
+    margin-top: 10px;
+    font-family: Metropolis-Regular;
+}
+
+#email-app-button {
+    font-family: Metropolis-Regular;
+    background-color: var(--highlight-reduced-opacity);
+    margin-left: 10px;
+}
+
+#email-app-button a {
+    font-family: Metropolis-Regular;
+    color: var(--highlight-color);
+    text-decoration: none;
+}
+

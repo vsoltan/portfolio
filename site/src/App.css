@@ -53,6 +53,7 @@ a {
     color: var(--highlight-color); 
     text-decoration: none;
     position: relative;
+    outline: none;
 }
 
 a.link:hover {

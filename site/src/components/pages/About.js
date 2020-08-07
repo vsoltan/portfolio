@@ -1,7 +1,7 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import prof from '../../assetts/images/prof.jpeg';
+import prof from '../../assetts/images/about-page/prof.jpeg';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import '../../App.css';
 
@@ -51,7 +51,7 @@ const About = () => (
             <Container className="container">
                 <Row>
                     <Col className="col-sm">
-                        <h1>Hey, I'm Valeriy Soltan, a Firmware Intern at <a className="link" href="https://openthings.io/" target="_blank" rel="noopener noreferrer">OpenThings.</a></h1>
+                        <h1>Hey, I'm Valeriy, a Firmware Intern at <a className="link" href="https://openthings.io/" target="_blank" rel="noopener noreferrer">OpenThings.</a></h1>
                         <div className="about">
                             <p>Currently working towards a B.S in Computer Science and Statistics at the University of Massachusetts—Amherst.</p>
                             <p>Interested in deconstructing the way things work. Passionate about systems programming, computer architecture, and building
