@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2adb7073aaf08ce0f5519b53c8e4d2a6",
+    "revision": "5d52d46449960dfc5e5846d3228e9ec9",
     "url": "/portfolio/index.html"
   },
   {
-    "revision": "8a6d73282a08252b5dcf",
-    "url": "/portfolio/static/css/main.1e6015f2.chunk.css"
+    "revision": "04492558c4cd58fe95d0",
+    "url": "/portfolio/static/css/main.66d2f419.chunk.css"
   },
   {
-    "revision": "1555b37addfd6ec9987e",
-    "url": "/portfolio/static/js/2.1718ae17.chunk.js"
+    "revision": "c16f0b8223b6f5d2e8e4",
+    "url": "/portfolio/static/js/2.8e82d8b1.chunk.js"
   },
   {
     "revision": "4386012a6d334684338618496b7aac20",
-    "url": "/portfolio/static/js/2.1718ae17.chunk.js.LICENSE.txt"
+    "url": "/portfolio/static/js/2.8e82d8b1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8a6d73282a08252b5dcf",
-    "url": "/portfolio/static/js/main.38da2f7c.chunk.js"
+    "revision": "04492558c4cd58fe95d0",
+    "url": "/portfolio/static/js/main.d97f10aa.chunk.js"
   },
   {
     "revision": "4630d88b084dbda85285",
@@ -38,6 +38,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "1a103d6d4ac5fee828119b186ed86b82",
     "url": "/portfolio/static/media/cow-acceled.1a103d6d.png"
+  },
+  {
+    "revision": "3d27b462cc2e9d44eb1ad69d1f932851",
+    "url": "/portfolio/static/media/iter1.3d27b462.png"
   },
   {
     "revision": "34f28a706bb89374e8040ecb0659f7f2",
@@ -80,8 +84,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/media/slide-tile.8d502578.png"
   },
   {
+    "revision": "b2dfa9d327bb1c428c36dd86d085494c",
+    "url": "/portfolio/static/media/soltan-swe.b2dfa9d3.pdf"
+  },
+  {
     "revision": "fd3b746481bf1fc914bd960768417a5e",
     "url": "/portfolio/static/media/teapot.fd3b7464.png"
+  },
+  {
+    "revision": "9386cd15388b6f7c17b6afdc02512049",
+    "url": "/portfolio/static/media/user.9386cd15.png"
   },
   {
     "revision": "d108d1883aa0bca3fb287c9e661a0443",
