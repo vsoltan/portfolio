@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "35ef4db1fbacefdd3fbb55030c3dd932",
+    "revision": "4590e2c058f8be48a5de5ae6249a106f",
     "url": "/portfolio/index.html"
   },
   {
-    "revision": "d4a18bb202e46ade1e59",
+    "revision": "fb19828104fef7e6eef9",
     "url": "/portfolio/static/css/main.66d2f419.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/js/2.8e82d8b1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d4a18bb202e46ade1e59",
-    "url": "/portfolio/static/js/main.77f80483.chunk.js"
+    "revision": "fb19828104fef7e6eef9",
+    "url": "/portfolio/static/js/main.700a5176.chunk.js"
   },
   {
     "revision": "4630d88b084dbda85285",
@@ -84,8 +84,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/media/slide-tile.8d502578.png"
   },
   {
-    "revision": "b2dfa9d327bb1c428c36dd86d085494c",
-    "url": "/portfolio/static/media/soltan-swe.b2dfa9d3.pdf"
+    "revision": "662753e32cd3c5edb7b1269689577699",
+    "url": "/portfolio/static/media/soltan-swe.662753e3.pdf"
   },
   {
     "revision": "fd3b746481bf1fc914bd960768417a5e",
