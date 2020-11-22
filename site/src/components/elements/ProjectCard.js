@@ -71,10 +71,10 @@ class ProjectCard extends React.Component {
         this.overlayData = props.overlayData;
     }
     showOverlay = () => (
-        this.setState({ overlayVisible : true})
+        this.setState({ overlayVisible: true })
     )
     hideOverlay = () => (
-        this.setState({ overlayVisible : false })
+        this.setState({ overlayVisible: false })
     )
     redirect = () => (
         window.open(
@@ -91,9 +91,9 @@ class ProjectCard extends React.Component {
 
     // TODO: figure out src button placement
     render() {
-        const titleValue = this.title[0], 
-              subTitleValue = this.title[1], 
-              altValue = this.title[2];
+        const titleValue = this.title[0],
+            subTitleValue = this.title[1],
+            altValue = this.title[2];
 
         const overlayBody = this.overlayData[0];
 
@@ -101,15 +101,15 @@ class ProjectCard extends React.Component {
             <Styles>
                 <div className="project-card" onClick={this.showOverlay}>
                     <div className="card-container">
-                        <img className="card-img" src={this.img} alt={altValue} style={{width: this.scale + "%"}}/>
-                        <span className="overlay"/>
+                        <img className="card-img" src={this.img} alt={altValue} style={{ width: this.scale + "%" }} />
+                        <span className="overlay" />
                     </div>
                     <div className="text-container">
                         <p id={"project-title"}>{titleValue}</p>
                         <p id={"project-sub-title"}>{subTitleValue}</p>
                     </div>
                 </div>
-                <Modal size ="lg" scrollable={true} show={this.state.overlayVisible} onHide={this.hideOverlay}>
+                <Modal size="lg" scrollable={true} show={this.state.overlayVisible} onHide={this.hideOverlay}>
                     <Modal.Header closeButton>
                         <Modal.Title>
                             <h1>{titleValue}</h1>
@@ -120,14 +120,14 @@ class ProjectCard extends React.Component {
                         {overlayBody}
                         <Button variant="primary" className="float-right src" onClick={this.redirect}>
                             <div className="btn-content">
-                                <FontAwesomeIcon icon={faGithub} className="github-icon"/>
+                                <FontAwesomeIcon icon={faGithub} className="github-icon" />
                                 <a className="src-link">src</a>
                             </div>
                         </Button>
-                        <Button variant="primary" className="float-right demo" onClick={this.redirectDemo} style={{display: (this.demoLink ? 'block' : 'none')}}>
+                        <Button variant="primary" className="float-right demo" onClick={this.redirectDemo} style={{ display: (this.demoLink ? 'block' : 'none') }}>
                             <a>Demo</a>
                         </Button>
-                    </Modal.Body>    
+                    </Modal.Body>
                 </Modal>
             </Styles>
         );

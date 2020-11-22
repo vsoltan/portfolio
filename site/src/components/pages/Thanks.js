@@ -16,10 +16,10 @@ const Styles = styled.div`
 const Acknowledgements = () => (
     <Styles>
         <Container>
-            <h1 id="title">Thank You!</h1> 
+            <h1 id="title">Thank You!</h1>
             <p>
-                I hope you enjoyed reading about some of the cool things I've been working on over the years! Please reach out regarding 
-                my projects, future opportunities, or just to say hello. A special thank you to Evgeni Belin for his passion for learning, 
+                I hope you enjoyed reading about some of the cool things I've been working on over the years! Please reach out regarding
+                my projects, future opportunities, or just to say hello. A special thank you to Evgeni Belin for his passion for learning,
                 mentorship, and lectures on all sorts of interesting things.
             </p>
         </Container>
