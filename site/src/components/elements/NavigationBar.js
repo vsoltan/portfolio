@@ -7,6 +7,8 @@ import Button from 'react-bootstrap/Button';
 import { animateScroll as scroll } from "react-scroll";
 import styled from 'styled-components';
 
+import ContactForm from "../elements/ContactForm";
+
 import resume from '../../assetts/soltan-swe.pdf';
 
 import '../../App.css';
@@ -111,16 +113,7 @@ class NavigationBar extends React.Component {
 								</Modal.Title>
 							</Modal.Header>
 							<Modal.Body>
-								<div>
-									<p>Please send all inquiries to the following address: </p>
-									<span>
-										<InputGroup.Text id="email-text">vsoltan@umass.edu</InputGroup.Text>
-										<Button className="float-right" id="email-app-button">
-											<a href="mailto:vsoltan@umass.edu">Open in App</a>
-										</Button>
-										<Button className="float-right" onClick={() => { navigator.clipboard.writeText("vsoltan@umass.edu") }}>Copy</Button>
-									</span>
-								</div>
+								<ContactForm />
 							</Modal.Body>
 						</Modal>
 

@@ -14,6 +14,12 @@ import SLI from '../../assetts/images/project-page/slide/slide-tile.png';
 // overlay image collections 
 import ultsoft from '../../assetts/images/project-page/ultimate/ultsoft.png';
 
+import pong from '../../assetts/images/project-page/mbed-pong/pong.png';
+import gamePong from '../../assetts/images/project-page/mbed-pong/game.png';
+import sidePong from '../../assetts/images/project-page/mbed-pong/side.png';
+import topPong from '../../assetts/images/project-page/mbed-pong/top.png';
+import serverPong from '../../assetts/images/project-page/mbed-pong/server.png';
+
 import iter1 from '../../assetts/images/project-page/portfolio/iter1.png';
 
 import board from '../../assetts/images/project-page/watch/board.png';
@@ -60,10 +66,10 @@ const Styles = styled.div`
 
 function UltimateCard() {
     const UHRTitle = [
-        "Co-Op Project", 
+        "Co-Op Project",
         "Full Stack Application",
         "Ultimate Software Logo"
-    ]; 
+    ];
     const overlayContent = (
         <React.Fragment>
             <div className="project-gallery">
@@ -71,19 +77,50 @@ function UltimateCard() {
             </div>
             <div className="project-description">
                 <p>
-                    work in progress! 
+                    work in progress!
                 </p>
             </div>
         </React.Fragment>
     );
     const UHROverlay = [
-        overlayContent, 
+        overlayContent,
         "https://github.com/vsoltan"
     ];
     return (
         <ProjectCard title={UHRTitle} img={ultsoft} scale={50} overlayData={UHROverlay} />
     );
 
+}
+
+function PongCard() {
+    const MBPTitle = [
+        "Mbed-Pong",
+        "Semester Project",
+        "To be decided" // TODO 
+    ];
+    const overlayContent = (
+        <React.Fragment>
+            <div className="project-gallery">
+                <Image src={serverPong} className="img-fluid gallery-item" />
+                <Image src={topPong} className="img-fluid gallery-item" />
+                <Image src={sidePong} className="img-fluid gallery-item" />
+                <Image src={gamePong} className="img-fluid gallery-item" />
+            </div>
+            <div className="project-description">
+                <p>
+                    work in progress!
+                </p>
+            </div>
+        </React.Fragment>
+    );
+
+    const MBPOverlay = [
+        overlayContent,
+        "https://github.com/Mbed-Pong"
+    ];
+    return (
+        <ProjectCard title={MBPTitle} img={pong} scale={50} overlayData={MBPOverlay} />
+    );
 }
 
 // faceid logo: https://macteo.it/ios/2017/09/28/face-id.html
@@ -127,7 +164,7 @@ function PortfolioCard() {
         "https://github.com/vsoltan/portfolio",
     ];
     return (
-        <ProjectCard title={PFTitle} img={PRO} scale={35} overlayData={PFOverlay} />
+        <ProjectCard title={PFTitle} img={PRO} scale={25} overlayData={PFOverlay} />
     );
 }
 
@@ -146,7 +183,7 @@ function OpenSprinklerCard() {
                 <p>
                     OpenSprinkler is an open source, web-based smart sprinkler controller for lawn and plant watering.
                     As a firmware intern, I am working on implementing user-requested features while maintaining and
-                    improving the functionality of the OpenSprinkler platform. So far, my work has included adding MQTT 
+                    improving the functionality of the OpenSprinkler platform. So far, my work has included adding MQTT
                     integration, expanding time-keeping and job-queue restructuring capabilities,
                     and improving home automation hub compatibility.
                 </p>
@@ -210,8 +247,6 @@ function SimpleWatchCard() {
         <ProjectCard title={WatchTitle} img={board} scale={40} overlayData={WatchOverlay} demoLink={"https://www.youtube.com/watch?v=erve9Y-6WI4&feature=youtu.be"} />
     );
 }
-
-// TODO: correct number mistake!!!!!!
 
 function AcceleratorCard() {
     const AccTitle = [
@@ -312,10 +347,11 @@ const Featured = () => (
             <h1 id={"title"}>My Work.</h1>
             <div className="project-feature">
                 {UltimateCard()}
-                {PortfolioCard()}
-                {OpenSprinklerCard()}
+                {PongCard()}
                 {SimpleWatchCard()}
                 {AcceleratorCard()}
+                {PortfolioCard()}
+                {OpenSprinklerCard()}
                 {SlideCard()}
             </div>
         </Container>

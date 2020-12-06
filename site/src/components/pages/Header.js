@@ -38,6 +38,7 @@ const Styles = styled.div`
     }
     .social-tab {
         padding-left: 0; 
+        margin-top: 1.2rem;
     }
     .social-item {
         padding-right: 15px;
@@ -65,6 +66,10 @@ const Styles = styled.div`
     }
 `;
 
+const positionTitle = "Firmware Intern";
+const companyName = "OpenThings";
+const companyURL = "https://openthings.io/";
+
 const wrappedContent = "Actively looking for Summer 2021 opportunities: I have a breadth of experience working in dynamic environments across embedded and mobile platforms.";
 
 const Header = () => (
@@ -74,27 +79,27 @@ const Header = () => (
                 <Row>
                     <Col className="col-sm">
                         <div className="header">
-                            <h1>Hey, I'm Valeriy, a Firmware Intern at <a className="link" href="https://openthings.io/" target="_blank" rel="noopener noreferrer">OpenThings.</a></h1>
-                            <div className="social-tab">
-                                <a href="https://github.com/vsoltan"
-                                    className="social-item github" target="_blank">
-                                    <FontAwesomeIcon icon={faGithub} size="2x" />
-                                </a>
-                                <a href="https://www.linkedin.com/in/valeriy-soltan/"
-                                    className="social-item linkedin" target="_blank">
-                                    <FontAwesomeIcon icon={faLinkedin} size="2x" />
-                                </a>
-                                <a href="https://twitter.com/vsoltann"
-                                    className="social-item twitter" target="_blank">
-                                    <FontAwesomeIcon icon={faTwitter} size="2x" />
-                                </a>
-                            </div>
+                            <h1>Hey, I'm Valeriy, a {positionTitle} at <a className="link" href={companyURL} target="_blank" rel="noopener noreferrer">{companyName}.</a></h1>
                         </div>
                         <div className="about">
                             <p>Currently working towards a B.S in Computer Science and Statistics at the University of Massachusetts—Amherst.</p>
                             <p>Interested in deconstructing the way things work. Passionate about systems programming, computer architecture, and building
                                 robust solutions to problems.</p>
                             <p id="wrap-display">{wrappedContent}</p>
+                        </div>
+                        <div className="social-tab">
+                            <a href="https://github.com/vsoltan"
+                                className="social-item github" target="_blank">
+                                <FontAwesomeIcon icon={faGithub} size="2x" />
+                            </a>
+                            <a href="https://www.linkedin.com/in/valeriy-soltan/"
+                                className="social-item linkedin" target="_blank">
+                                <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                            </a>
+                            <a href="https://twitter.com/vsoltann"
+                                className="social-item twitter" target="_blank">
+                                <FontAwesomeIcon icon={faTwitter} size="2x" />
+                            </a>
                         </div>
                     </Col>
                     <Col className="col-sm col-images">
