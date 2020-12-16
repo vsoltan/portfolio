@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3b1e689b3af87c725e579bb3b53e55e7",
+    "revision": "f86394f59a4b1097a3909be41f4ae9fe",
     "url": "/portfolio/index.html"
   },
   {
-    "revision": "419d079db7043139d889",
-    "url": "/portfolio/static/css/main.ecb6ffd8.chunk.css"
+    "revision": "1a071d4703012766e6cb",
+    "url": "/portfolio/static/css/main.1ea3ec93.chunk.css"
   },
   {
-    "revision": "b49aae99526d2f7befcc",
-    "url": "/portfolio/static/js/2.ac0c45b5.chunk.js"
+    "revision": "dd2d540e21289d38a207",
+    "url": "/portfolio/static/js/2.1f00d92a.chunk.js"
   },
   {
     "revision": "890200ee7ed40dba494c88daf92d986f",
-    "url": "/portfolio/static/js/2.ac0c45b5.chunk.js.LICENSE.txt"
+    "url": "/portfolio/static/js/2.1f00d92a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "419d079db7043139d889",
-    "url": "/portfolio/static/js/main.772a305d.chunk.js"
+    "revision": "1a071d4703012766e6cb",
+    "url": "/portfolio/static/js/main.f46b6296.chunk.js"
   },
   {
     "revision": "4630d88b084dbda85285",
     "url": "/portfolio/static/js/runtime-main.d7e2f213.js"
+  },
+  {
+    "revision": "8507a3a8cf98670c8a729b3fc39af65e",
+    "url": "/portfolio/static/media/appView.8507a3a8.png"
   },
   {
     "revision": "c880a0bd4314523fc99015d27f1c8be1",
@@ -76,6 +80,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/media/pong.6823d36b.png"
   },
   {
+    "revision": "4d85aaa6a3edf8607d679b90538e5815",
+    "url": "/portfolio/static/media/postman.4d85aaa6.png"
+  },
+  {
     "revision": "a2772c68855b6d5051aba4185b7dd2de",
     "url": "/portfolio/static/media/prof.a2772c68.jpeg"
   },
@@ -92,20 +100,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/media/side.d0d787d3.png"
   },
   {
-    "revision": "dbe662fd86884b8611a1be1c8ec5c5ac",
-    "url": "/portfolio/static/media/slide-config.dbe662fd.png"
-  },
-  {
-    "revision": "8f983faf4a9865530a2247cfd00f579c",
-    "url": "/portfolio/static/media/slide-qr.8f983faf.png"
-  },
-  {
     "revision": "8d50257854a11b4229f8644c35ef32fb",
     "url": "/portfolio/static/media/slide-tile.8d502578.png"
   },
   {
-    "revision": "662753e32cd3c5edb7b1269689577699",
-    "url": "/portfolio/static/media/soltan-swe.662753e3.pdf"
+    "revision": "40277704e593f319cb1e9d4e11c9d4f9",
+    "url": "/portfolio/static/media/soltan-swe.40277704.pdf"
   },
   {
     "revision": "fd3b746481bf1fc914bd960768417a5e",
