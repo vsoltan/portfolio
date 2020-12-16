@@ -9,15 +9,15 @@ import styled from 'styled-components';
 
 import ContactForm from "../elements/ContactForm";
 
-import resume from '../../assetts/soltan-swe.pdf';
+import resume from '../../assets/soltan-swe.pdf';
 
 import '../../App.css';
 import '../../Overlay.css';
 import "bootstrap/js/src/collapse.js";
 
 // about me modal assetts 
-import umasscs from '../../assetts/images/about-page/umass-cs.png';
-import aubri from '../../assetts/images/about-page/aubri.png';
+import umasscs from '../../assets/images/about-page/umass-cs.png';
+import aubri from '../../assets/images/about-page/aubri.png';
 
 
 const Styles = styled.div`
@@ -94,9 +94,9 @@ class NavigationBar extends React.Component {
 						</button>
 						<div className="collapse navbar-collapse" id="navbarTogglerDemo02">
 							<ul className="navbar-nav ml-auto mt-2 mt-lg-0">
-								<li className="nav-item active">
+								{/* <li className="nav-item active">
 									<a className="nav-link" onClick={this.showAboutPage}>About</a>
-								</li>
+								</li> */}
 								<li className="nav-item active">
 									<a className="nav-link" href={resume} download='soltan-swe.pdf'>Resume</a>
 								</li>
@@ -118,22 +118,20 @@ class NavigationBar extends React.Component {
 						</Modal>
 
 						{/* About me, should probably make this its own component */}
-						<Modal size="lg" scrollable={true} show={this.state.aboutPageVisible} onHide={this.hideAboutPage}>
+						{/* <Modal size="lg" scrollable={true} show={this.state.aboutPageVisible} onHide={this.hideAboutPage}>
 							<Modal.Header closeButton>
 								<Modal.Title>
 									<h1>About Me</h1>
 								</Modal.Title>
 							</Modal.Header>
 							<Modal.Body>
-								<div className="project-gallery">
+								{/* <div className="project-gallery">
 									<Image src={umasscs} className="img-fluid gallery-item" />
 									<Image src={aubri} className="img-fluid gallery-item" />
 								</div>
 								This is a work in progress!
 							</Modal.Body>
-						</Modal>
-
-
+						</Modal> */}
 					</Container>
 				</nav>
 			</Styles>

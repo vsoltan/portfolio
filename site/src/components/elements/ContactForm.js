@@ -60,10 +60,10 @@ class ContactForm extends React.Component {
         if (status === "SUCCESS") {
             // offset the button margin with inline styling 
             errorMessage = (
-                <p className="success" style={{"margin-bottom": "15px"}}>Thanks!</p>
+                <p className="success" style={{ "margin-bottom": "15px" }}>Thanks!</p>
             );
             submitButton = (
-                <button style={{display: "none"}}>Submit</button>
+                <button style={{ display: "none" }}>Submit</button>
             );
         } else if (status === "ERROR") {
             if (status === "ERROR") {
@@ -87,15 +87,9 @@ class ContactForm extends React.Component {
                     <label>Message:</label>
                     <textarea name="message" cols="40" rows="5"></textarea>
 
-                    { errorMessage }
-                    { submitButton }
+                    {errorMessage}
+                    {submitButton}
                     <div></div>
-                    {/* <p className="alert" ></p>
-                    <button>Submit</button> */}
-
-
-                    {/* {status === "SUCCESS" ? <p className="alert">Thanks!</p> : <button>Submit</button>}
-                    {status === "ERROR" && <p className="alert">Ooops! There was an error.</p>} */}
                 </form>
             </Styles>
         );

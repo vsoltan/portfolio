@@ -1,7 +1,7 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import prof from '../../assetts/images/about-page/prof.jpeg';
+import prof from '../../assets/images/about-page/prof.jpeg';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {

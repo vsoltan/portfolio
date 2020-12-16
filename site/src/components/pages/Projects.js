@@ -6,35 +6,34 @@ import styled from 'styled-components';
 import ProjectCard from '../elements/ProjectCard';
 
 // tile images 
-import PRO from '../../assetts/images/project-page/portfolio/user.png';
-import OPS from '../../assetts/images/project-page/opensprinkler/ops-tile.png';
-import RTX from '../../assetts/images/project-page/accel/rtx-tile.png';
-import SLI from '../../assetts/images/project-page/slide/slide-tile.png';
+import PRO from '../../assets/images/project-page/portfolio/user.png';
+import OPS from '../../assets/images/project-page/opensprinkler/ops-tile.png';
+import RTX from '../../assets/images/project-page/accel/rtx-tile.png';
+import SLI from '../../assets/images/project-page/slide/slide-tile.png';
 
 // overlay image collections 
-import ultsoft from '../../assetts/images/project-page/ultimate/ultsoft.png';
+import ultsoft from '../../assets/images/project-page/ultimate/ultsoft.png';
+import appView from '../../assets/images/project-page/ultimate/appView.png';
+import postman from '../../assets/images/project-page/ultimate/postman.png';
 
-import pong from '../../assetts/images/project-page/mbed-pong/pong.png';
-import gamePong from '../../assetts/images/project-page/mbed-pong/game.png';
-import sidePong from '../../assetts/images/project-page/mbed-pong/side.png';
-import topPong from '../../assetts/images/project-page/mbed-pong/top.png';
-import serverPong from '../../assetts/images/project-page/mbed-pong/server.png';
+import pong from '../../assets/images/project-page/mbed-pong/pong.png';
+import gamePong from '../../assets/images/project-page/mbed-pong/game.png';
+import sidePong from '../../assets/images/project-page/mbed-pong/side.png';
+import topPong from '../../assets/images/project-page/mbed-pong/top.png';
+import serverPong from '../../assets/images/project-page/mbed-pong/server.png';
 
-import iter1 from '../../assetts/images/project-page/portfolio/iter1.png';
+import iter1 from '../../assets/images/project-page/portfolio/iter1.png';
 
-import board from '../../assetts/images/project-page/watch/board.png';
-import watchApp from '../../assetts/images/project-page/watch/watch-app.png';
-import watchMusic from '../../assetts/images/project-page/watch/watch-music.png';
-import watchTimer from '../../assetts/images/project-page/watch/watch-timer.png';
-import watchWear from '../../assetts/images/project-page/watch/watch-wear.png';
+import board from '../../assets/images/project-page/watch/board.png';
+import watchApp from '../../assets/images/project-page/watch/watch-app.png';
+import watchMusic from '../../assets/images/project-page/watch/watch-music.png';
+import watchTimer from '../../assets/images/project-page/watch/watch-timer.png';
+import watchWear from '../../assets/images/project-page/watch/watch-wear.png';
 
-import ballShadow from '../../assetts/images/project-page/accel/ball-shadow.png';
-import cowAccel from '../../assetts/images/project-page/accel/cow-acceled.png';
-import teapot from '../../assetts/images/project-page/accel/teapot.png';
-import ballAray from '../../assetts/images/project-page/accel/ball-array.png';
-
-import slideConfig from '../../assetts/images/project-page/slide/slide-config.png';
-import slideQR from '../../assetts/images/project-page/slide/slide-qr.png';
+import ballShadow from '../../assets/images/project-page/accel/ball-shadow.png';
+import cowAccel from '../../assets/images/project-page/accel/cow-acceled.png';
+import teapot from '../../assets/images/project-page/accel/teapot.png';
+import ballAray from '../../assets/images/project-page/accel/ball-array.png';
 
 import '../../App.css';
 import '../../Overlay.css';
@@ -72,19 +71,58 @@ function UltimateCard() {
     ];
     const overlayContent = (
         <React.Fragment>
+            <div className="project-gallery top-gallery">
+                <Image src={postman} className="img-fluid gallery-item" />
+            </div>
             <div className="project-gallery">
-                <Image src={ultsoft} className="img-fluid gallery-item" />
+                <Image src={appView} className="img-fluid gallery-item" />
             </div>
             <div className="project-description">
                 <p>
-                    work in progress!
+                    For the Fall 2020 semester, UMass partnered with Ultimate Software (now UGK), allowing students
+                    to participate in the specification, design, creation, and testing of a product on behalf of the
+                    company sponsor. As part of this cooperative/integrative experience, we were tasked with building
+                    a microservice that would fit into the broader ecosystem or suite of human resource software developed
+                    by UKG. More specifically, we were responsible for designing an interface that provides employees
+                    with a view of their company's structure and allows managers to make changes to it. Some features that we 
+                    implemented include; adding, editing, transferring, and removing employees; uploading profile pictures 
+                    for each employee; and searching the organization by a number of supported keywords. 
+                </p>
+                <p>
+                    Prior to this project, I had absolutely zero experience working with databases and backend technologies 
+                    and when it came time to split into teams, I decided to take advantage of this learning opportunity and 
+                    joined the backend team. As such, I worked on setting up a collection of endpoints to service the front 
+                    end's requests to the database. I also wrote middleware to facilitate authentication using JSON Web Tokens 
+                    (JWT), authorization to give different users appropriate levels of access, and data validation to make sure that
+                    frontend requests were being properly formatted. Looking back, the first couple of weeks it seemed like I was drinking
+                    from a firehose, learning about Node, MongoDB, Web Tokens; among other things. As a direct result of this; however, I came 
+                    away having a completely different understanding of the way that the internet works and a glimpse into how complex, data-driven
+                    applications are built. Furthermore, since I was a part of a 10 person team, this experience reinforced the importance of 
+                    clear communication, comprehensive documentation, and extensive testing.
+                </p>
+                <p>
+                    For challenges, there were the usual but ever-present inaccuracies in time estimation and lapses in communication but also the 
+                    fact that every member of the backend team was working with many of the technologies for the first time. A more technically rooted
+                    challenge was regarding the way we opted to store our data, which was in documents since we decided to use MongoDB. However, the design 
+                    specification for our API was such that the frontend would receive the employee data already pre-constructed as a tree. But, since 
+                    an addition, removal, or transfer of an employee could change the entire structure of the tree, the team had to find a way to
+                    minimize the number of flat list to tree conversions that we otherwise had to perform every time the frontend requested tree data. We tried storing the
+                    tree as a separate collection for each company but eventually realized that MongoDB is fairly limited when it comes to search queries 
+                    on hierarchical structures. What we eventually decided on is to maintain a cache that is updated whenever the employee list is mutated. 
+                    So any time the frontend requests employee data, we already have the most up-to-date flat and constructed lists that we can send over. 
+                </p>
+                <p>
+                    There are a lot of other design decisions that I left out here for the sake of brevity, but I would like to conclude by saying that 
+                    so far, this project is unique in the sheer number of moving parts that were involved and the communication that 
+                    was required to make a cohesive, functional product. Although there are features we could have added or refinements that could have been made,
+                    I like to think that this is a taste of what's to come in the world of software engineering and I absolutely look forward to it. 
                 </p>
             </div>
         </React.Fragment>
     );
     const UHROverlay = [
         overlayContent,
-        "https://github.com/vsoltan"
+        "https://github.com/Hierarchy-Heroes/hhchart-backend"
     ];
     return (
         <ProjectCard title={UHRTitle} img={ultsoft} scale={50} overlayData={UHROverlay} />
@@ -94,9 +132,9 @@ function UltimateCard() {
 
 function PongCard() {
     const MBPTitle = [
-        "Mbed-Pong",
+        "mbed-Pong",
         "Semester Project",
-        "To be decided" // TODO 
+        "pong game"
     ];
     const overlayContent = (
         <React.Fragment>
@@ -108,7 +146,41 @@ function PongCard() {
             </div>
             <div className="project-description">
                 <p>
-                    work in progress!
+                    Capstone project for UMASS course COMPSCI 335: Computer Architecture. My partner
+                    <a className="link" href="https://github.com/DenizGuler" target="_blank" rel="noopener noreferrer"> Deniz Guler </a>
+                    and I opted to create a networked, multiplayer pong game; the only restriction being that we could
+                    only use the supplied mbed LPC1768 microcontroller. The idea was simple: our microcontrollers represented
+                    the clients and would take input from an array of buttons. Meanwhile, a Node.js server would connect
+                    the clients, update gamestate parameters, and distribute the updated gamestate every tick for the duration of the game.
+                </p>
+                <p>
+                    Since the chip lacked support for wireless connectivity, we had to use ethernet and as neither of
+                    us had displays or ethernet adapters lying around, we needed to order the parts. But, we also did
+                    not have any relevant experience in networking and Node so we knew that we had to put in the work
+                    to figure out the fundamentals. While the parts were being delivered, we managed to set up a very
+                    basic Node.js server locally and mock the networking elements of the firmware by writing C code outside
+                    of the mbed environment. Before the parts even came in, we had a working prototype of gamestate sharing
+                    between the client and server. We could serialize a JavaScript object, write it to a socket, and read a
+                    response from a server. Awesome.
+                </p>
+                <p>
+                    The rest of the project was smooth sailing from there as we were just layering additional components on top
+                    of the foundation that we had already built. Upon adding the ethernet module, we hosted our server to test
+                    that multiple clients could connect and resolved a number of networking-related issues. When the display
+                    arrived, the backend was completely fleshed out and all that remained was to add graphical assets.
+                </p>
+                <p>
+                    Although this all sounds peachy, this project was not without its fair share of issues and learnings.
+                    We had a lot of trouble getting UDP sockets to work when we initially tried hosting on Heroku (as it only supports WebSockets)
+                    and had to switch to AWS EC2 instances. When we were adding support for replayability and playing several
+                    games back to back, we did not flush the socket and had a lot of unintended behavior that resulted from reading
+                    residual game states. Also, the mbed interface was at times difficult to work with as we came across
+                    issues with the editor, deprecated libraries, and a half-baked version control system.
+                </p>
+                <p>
+                    All in all, however, this project was a boatload of fun and I learned a lot about socket programming,
+                    networking, and Node. As a part of a computer architecture course, our reliance on libraries and other
+                    abstractions definitely made me appreciate the inner workings of low level machinery that much more.
                 </p>
             </div>
         </React.Fragment>
@@ -119,7 +191,7 @@ function PongCard() {
         "https://github.com/Mbed-Pong"
     ];
     return (
-        <ProjectCard title={MBPTitle} img={pong} scale={50} overlayData={MBPOverlay} />
+        <ProjectCard title={MBPTitle} img={pong} scale={50} overlayData={MBPOverlay} demoLink={"https://www.youtube.com/watch?v=hOHv9d9GC_Y&feature=youtu.be"}/>
     );
 }
 
@@ -304,10 +376,7 @@ function SlideCard() {
     // https://app-mockup.com/ios/# to create image
     const overlayContent = (
         <React.Fragment>
-            <div className="project-gallery">
-                <Image src={slideConfig} className="img-fluid gallery-item" />
-                <Image src={slideQR} className="img-fluid gallery-item" />
-            </div>
+            <div className="project-gallery"></div>
             <div className="project-description">
                 <p>
                     After my first year in university, a group of my friends and I decided to spend the summer creating a mobile

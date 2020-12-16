@@ -73,6 +73,10 @@
     grid-gap: 10px;
 }
 
+.top-gallery {
+    padding-bottom: 10px;
+}
+
 .gallery-item {
     border-radius: 5px;
 }
