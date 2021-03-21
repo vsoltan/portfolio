@@ -1,7 +1,7 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import prof from '../../assets/images/about-page/prof.jpeg';
+import profPic from '../../assets/images/about-page/profPic.jpeg';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -22,10 +22,10 @@ const Styles = styled.div`
     .portrait {
         object-fit: cover;
         width: 100%;
-        height: 100%;
         box-sizing: border-box;
         max-height: 450px;
         border-radius: 5px;
+
     }
     .img-container {
         display: flex;
@@ -64,30 +64,42 @@ const Styles = styled.div`
             padding-top: 1.5em; 
         }
     }
+    // keep social media tab aligned with image 
+    @media screen and (min-width: 992px) {
+        #row-pos { position: relative; }
+        #social-tab-pos { 
+            position: absolute; 
+            bottom: 0;
+        }
+    }
 `;
 
-const positionTitle = "Firmware Intern";
-const companyName = "OpenThings";
-const companyURL = "https://openthings.io/";
+const positionTitle = "incoming Software Intern";
+const companyName = "Electronic Arts";
+const companyURL = "https://www.ea.com/";
 
-const wrappedContent = "Actively looking for Summer 2021 opportunities: I have a breadth of experience working in dynamic environments across embedded and mobile platforms.";
+// const jobSearchYear = 2021; 
+// const wrappedContent = `Actively looking for Summer ${jobSearchYear} opportunities: I have a 
+//     breadth of experience working in dynamic environments across embedded and mobile platforms.`;
+
+const wrappedContent = `Enjoy playing volelyball, cooking, and gaming.`
 
 const Header = () => (
     <Styles>
         <div id="page-top">
             <Container className="container">
                 <Row>
-                    <Col className="col-sm">
+                    <Col className="col-sm" id="row-pos">
                         <div className="header">
-                            <h1>Hey, I'm Valeriy, a {positionTitle} at <a className="link" href={companyURL} target="_blank" rel="noopener noreferrer">{companyName}.</a></h1>
+                            <h1>Hey, I'm Valeriy, an {positionTitle} at <a className="link" href={companyURL} target="_blank" rel="noopener noreferrer">{companyName}.</a></h1>
                         </div>
                         <div className="about">
-                            <p>Currently working towards a B.S in Computer Science and Statistics at the University of Massachusetts—Amherst.</p>
-                            <p>Interested in deconstructing the way things work. Passionate about systems programming, computer architecture, and building
-                                robust solutions to problems.</p>
-                            <p id="wrap-display">{wrappedContent}</p>
+                            <p>Currently working towards a B.S in Computer Science and a minor in Mathematics at the University of Massachusetts—Amherst.</p>
+                            <p>Interested in deconstructing the way things work. Passionate about systems programming, clever algorithms, and distributed systems.</p>
+                            <p></p>
+                            {/* <p id="wrap-display">{wrappedContent}</p> */}
                         </div>
-                        <div className="social-tab">
+                        <div className="social-tab" id="social-tab-pos">
                             <a href="https://github.com/vsoltan"
                                 className="social-item github" target="_blank">
                                 <FontAwesomeIcon icon={faGithub} size="2x" />
@@ -104,9 +116,9 @@ const Header = () => (
                     </Col>
                     <Col className="col-sm col-images">
                         <div className="img-container">
-                            <Image src={prof} className="portrait" />
+                            <Image src={profPic} className="portrait" />
                         </div>
-                        <p id="wrap-around">{wrappedContent}</p>
+                        {/* <p id="wrap-around">{wrappedContent}</p> */}
                     </Col>
                 </Row>
             </Container>

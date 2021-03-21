@@ -4,6 +4,8 @@
     --highlight-color: rgb(0, 123, 255);
     --light-text-color: rgb(140, 140, 140);
     --highlight-reduced-opacity: rgba(0, 123, 255, 0.3);
+    /* --highlight-color: rgb(255, 71, 71); 
+    --highlight-reduced-opacity: rgba(255, 71, 71, 0.3);  */
     --card-background: rgb(240, 240, 240);
 }
 

@@ -16,8 +16,8 @@ import '../../Overlay.css';
 import "bootstrap/js/src/collapse.js";
 
 // about me modal assetts 
-import umasscs from '../../assets/images/about-page/umass-cs.png';
-import aubri from '../../assets/images/about-page/aubri.png';
+// import umasscs from '../../assets/images/about-page/umass-cs.png';
+// import aubri from '../../assets/images/about-page/aubri.png';
 
 
 const Styles = styled.div`
