@@ -14,11 +14,11 @@
     "bootstrap": "^4.5.0",
     "gh-pages": "^3.1.0",
     "jquery": "^3.5.1",
-    "jscs": "^3.0.7",
+    "jscs": "^2.1.1",
     "react": "^16.13.1",
     "react-bootstrap": "1.0.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
+    "react-scripts": "^4.0.3",
     "react-scroll": "^1.8.0",
     "styled-components": "^5.1.1"
   },
