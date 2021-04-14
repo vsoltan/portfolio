@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.01f56874.chunk.css",
-    "main.js": "/portfolio/static/js/main.0f07963b.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.0f07963b.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.b2c73c2d.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.b2c73c2d.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.0de547fb.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.0de547fb.js.map",
     "static/js/2.2e6dd694.chunk.js": "/portfolio/static/js/2.2e6dd694.chunk.js",
@@ -16,6 +16,7 @@
     "static/media/ball-shadow.a7c14ece.png": "/portfolio/static/media/ball-shadow.a7c14ece.png",
     "static/media/board.9fbba66c.png": "/portfolio/static/media/board.9fbba66c.png",
     "static/media/cow-acceled.13ad809c.png": "/portfolio/static/media/cow-acceled.13ad809c.png",
+    "static/media/ea-logo.6ea0ec46.png": "/portfolio/static/media/ea-logo.6ea0ec46.png",
     "static/media/game.6c141541.png": "/portfolio/static/media/game.6c141541.png",
     "static/media/iter1.1a133f47.png": "/portfolio/static/media/iter1.1a133f47.png",
     "static/media/ops-tile.3ed45853.png": "/portfolio/static/media/ops-tile.3ed45853.png",
@@ -40,6 +41,6 @@
     "static/js/runtime-main.0de547fb.js",
     "static/js/2.2e6dd694.chunk.js",
     "static/css/main.01f56874.chunk.css",
-    "static/js/main.0f07963b.chunk.js"
+    "static/js/main.b2c73c2d.chunk.js"
   ]
 }
