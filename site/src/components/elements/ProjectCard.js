@@ -56,6 +56,16 @@ const Styles = styled.div`
         font-size: 18px;
         margin: 0px 0px 0px 20px;
     }
+    @media screen and (min-width: 991px) {
+        .card-container {
+            height: 425px;
+        }
+    }
+    @media screen and (min-width: 700px) and (max-width: 990px) {
+        .card-container {
+            height: 350px;
+        }
+    }
 `;
 
 class ProjectCard extends React.Component {

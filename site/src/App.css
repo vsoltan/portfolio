@@ -14,6 +14,41 @@ body {
 }
 
 @font-face {
+    font-family: Cereal-Black;
+    src: url(assets/fonts/AirbnbCerealBlack.woff)
+}
+
+@font-face {
+    font-family: Cereal-Bold;
+    src: url(assets/fonts/AirbnbCerealBold.woff)
+}
+
+@font-face {
+    font-family: Cereal-Black;
+    src: url(assets/fonts/AirbnbCerealBlack.woff)
+}
+
+@font-face {
+    font-family: Cereal-Book;
+    src: url(assets/fonts/AirbnbCerealBook.woff)
+}
+
+@font-face {
+    font-family: Cereal-Extra-Bold;
+    src: url(assets/fonts/AirbnbCerealExtraBold.woff)
+}
+
+@font-face {
+    font-family: Cereal-Light;
+    src: url(assets/fonts/AirbnbCerealLight.woff)
+}
+
+@font-face {
+    font-family: Cereal-Medium;
+    src: url(assets/fonts/AirbnbCerealMedium.woff)
+}
+
+@font-face {
     font-family: Metropolis-Light;
     src: url(assets/fonts/metropolis-light.woff)
 }
@@ -34,15 +69,20 @@ body {
 }
 
 h1 {
-    font-family: Metropolis-Bold;
+    /* font-family: Metropolis-Bold; */
+    /* font-family: Cereal-Black; */
+    /* font-family: Cereal-Bold; */
+    font-family: Cereal-Bold;
 }
 
 h2 {
-    font-family: Metropolis-Regular;
+    /* font-family: Metropolis-Regular; */
+    font-family: Cereal-Book;
 }
 
 p {
-    font-family: Metropolis-Regular;
+    /* font-family: Metropolis-Regular; */
+    font-family: Cereal-Book;
     font-size: 17px;
 }
 

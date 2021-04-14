@@ -1,9 +1,7 @@
 
 import React from 'react';
-import { Container, Image } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import Modal from 'react-bootstrap/Modal';
-import InputGroup from 'react-bootstrap/InputGroup';
-import Button from 'react-bootstrap/Button';
 import { animateScroll as scroll } from "react-scroll";
 import styled from 'styled-components';
 
@@ -14,11 +12,6 @@ import resume from '../../assets/soltan-swe.pdf';
 import '../../App.css';
 import '../../Overlay.css';
 import "bootstrap/js/src/collapse.js";
-
-// about me modal assetts 
-// import umasscs from '../../assets/images/about-page/umass-cs.png';
-// import aubri from '../../assets/images/about-page/aubri.png';
-
 
 const Styles = styled.div`
     .navbar {
@@ -31,7 +24,8 @@ const Styles = styled.div`
     .navbar-nav .nav-link {
       color: black;
       font-size: 17px;
-      font-family: Metropolis-Bold;
+    //   font-family: Metropolis-Bold;
+	  font-family: Cereal-Bold;
       padding: 0 1.5em 0 1.5em;
       cursor: pointer;
     }
@@ -41,7 +35,8 @@ const Styles = styled.div`
     .navbar-brand {
       color: black;
       font-size: 20px;
-      font-family: Metropolis-Bold;
+    //   font-family: Metropolis-Bold;
+	  font-family: Cereal-Bold;
       cursor: pointer;
 	}
     .nav-item { // to get collapse bar to the right
