@@ -10,6 +10,7 @@ import PRO from '../../assets/images/project-page/portfolio/user.png';
 import OPS from '../../assets/images/project-page/opensprinkler/ops-tile.png';
 import RTX from '../../assets/images/project-page/accel/rtx-tile.png';
 import SLI from '../../assets/images/project-page/slide/slide-tile.png';
+import EALogo from '../../assets/images/project-page/ea-intern/ea-logo.png';
 
 // overlay image collections 
 import ultsoft from '../../assets/images/project-page/ultimate/ultsoft.png';
@@ -62,6 +63,35 @@ const Styles = styled.div`
         }
     }
 `;
+
+function ElectronicArtsCard() {
+    const EAITitle = [
+        "Electronic Arts", 
+        "Internship 2021", 
+        "Electronic Arts Logo"
+    ]; 
+    const overlayContent = (
+        <React.Fragment>
+            <div className="project-gallery top-gallery">
+
+            </div>
+            <div className="project-description">
+                <p>I'll be joining the EADP (EA Digital Platform) team this summer, working on SDK projects/tech across mobile and console platforms that are used by all EA Games.</p>
+                <p>From EAs website: "The EA Digital Platform (EADP) group provides central services that enable game teams to tap into the power of the global EA ecosystem. Compatible 
+                    across multiple platforms and devices, our platform empowers teams to foster deeper, more meaningful relationships with our players. The EADP is the foundation on which
+                     EA’s games are built. By providing reusable capabilities that game teams can easily integrate into their games, we allow them to focus on making incredible games. 
+                     These building blocks are made up of high-level service platforms that include Cloud, Commerce, Data and AI, Gameplay Services, Identity and Social."</p>
+            </div>
+        </React.Fragment>
+    ); 
+    const EAOverlay = [
+        overlayContent,
+        // "https://github.com/Hierarchy-Heroes/hhchart-backend"
+    ];
+    return (
+        <ProjectCard title={EAITitle} img={EALogo} scale={45} overlayData={EAOverlay} />
+    );
+}
 
 function UltimateCard() {
     const UHRTitle = [
@@ -415,6 +445,7 @@ const Featured = () => (
         <Container>
             <h1 id={"title"}>My Work.</h1>
             <div className="project-feature">
+                {ElectronicArtsCard()}
                 {UltimateCard()}
                 {PongCard()}
                 {SimpleWatchCard()}
