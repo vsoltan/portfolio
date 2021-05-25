@@ -70,7 +70,7 @@ const Styles = styled.div`
     }
 `;
 
-const positionTitle = "incoming Software Intern";
+const positionTitle = "Software Intern";
 const companyName = "Electronic Arts";
 const companyURL = "https://www.ea.com/";
 
@@ -85,7 +85,7 @@ const Header = () => (
                 <div className="custom-col">
                     <div className="custom-row-1">
                     <div className="header">
-                            <h1>Hey, I'm Valeriy, an {positionTitle} at <a className="link" href={companyURL} target="_blank" rel="noopener noreferrer">{companyName}.</a></h1>
+                            <h1>Hey, I'm Valeriy, a {positionTitle} at <a className="link" href={companyURL} target="_blank" rel="noopener noreferrer">{companyName}.</a></h1>
                         </div>
                         <SocialTab />
                         <div className="about">
