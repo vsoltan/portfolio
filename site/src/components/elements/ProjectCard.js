@@ -128,7 +128,7 @@ class ProjectCard extends React.Component {
                     </Modal.Header>
                     <Modal.Body>
                         {overlayBody}
-                        <Button variant="primary" className="float-right src" onClick={this.redirect}>
+                        <Button variant="primary" className="float-right src" onClick={this.redirect} style={{ visibility: (this.overlayData.length > 1 ? 'visible' : 'hidden') }}>
                             <div className="btn-content">
                                 <FontAwesomeIcon icon={faGithub} className="github-icon" />
                                 <a className="src-link">src</a>

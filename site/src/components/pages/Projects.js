@@ -76,11 +76,19 @@ function ElectronicArtsCard() {
 
             </div>
             <div className="project-description">
-                <p>I'll be joining the EADP (EA Digital Platform) team this summer, working on SDK projects/tech across mobile and console platforms that are used by all EA Games.</p>
-                <p>From EAs website: "The EA Digital Platform (EADP) group provides central services that enable game teams to tap into the power of the global EA ecosystem. Compatible 
-                    across multiple platforms and devices, our platform empowers teams to foster deeper, more meaningful relationships with our players. The EADP is the foundation on which
-                     EA’s games are built. By providing reusable capabilities that game teams can easily integrate into their games, we allow them to focus on making incredible games. 
-                     These building blocks are made up of high-level service platforms that include Cloud, Commerce, Data and AI, Gameplay Services, Identity and Social."</p>
+               <p>
+                    I was a part of the Engines Squad on the EADP (EA Digital Platform) team for the summer, working on a 
+                    cross-platform Unreal Engine plugin for the Authentication, Commerce, and Telemetry modules of EADPSDK.
+               </p>
+               <p>
+                    My work focused on exposing SDK functionality to Unreal Engine using Blueprints; Unreal's visual scripting feature. 
+                    To familiarize myself with the SDK, my first task was to build a demo UI for testing SDK modules using Unreal Engine's Slate UI Framework. 
+                    Afterwards, I worked on Blueprint functionality, effectively writing bindings for Unreal Engine's particular flavor of C++. I also produced 
+                    a document describing the design decisions and limitations encountered in replicating the SDK feature-set in Blueprint. When working on
+                    the Commerce module, I got to briefly play around with Unreal Rendering Threads, DirectX, and the Origin In-Game Overlay (IGO). In the 
+                    Telemetry module, I prototyped a code generator for creating Blueprint bindings using Protocol Buffers. Finally, I did some internal work 
+                    in the Origin SDK, adding a listener for user presence change. 
+               </p>
             </div>
         </React.Fragment>
     ); 
