@@ -398,7 +398,7 @@ function AcceleratorCard() {
     );
     const AccOverlay = [
         overlayContent,
-        "https://github.com/vsoltan/CS-373/tree/master/CS373HW7",
+        "https://github.com/vsoltan/rtx-accel",
     ];
     return (
         <ProjectCard title={AccTitle} img={RTX} scale={75} overlayData={AccOverlay} demoLink={"https://www.youtube.com/watch?v=pj4oyJgUgVc&feature=youtu.be"} />
