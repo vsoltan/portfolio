@@ -7736,7 +7736,7 @@ jscs-preset-wikimedia@~1.0.0:
   resolved "https://registry.yarnpkg.com/jscs-preset-wikimedia/-/jscs-preset-wikimedia-1.0.1.tgz#a6a5fa5967fd67a5d609038e1c794eaf41d4233d"
   integrity sha512-RWqu6IYSUlnYuCRCF0obCOHjJV0vhpLcvKbauwxmLQoZ0PiXDTWBYlfpsEfdhg7pmREAEwrARfDRz5qWD6qknA==
 
-jscs@^2.1.1:
+jscs@^2.11.0:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/jscs/-/jscs-2.11.0.tgz#6e11ef0caaa07731f9dcc2b2b27d8ecee1ddbcb6"
   integrity sha512-H4JMQcSOCNfpkxfc+djTGM10+BnZgrb0IRDMgYN5MvrDZxn06d1piEp87OmAsJASS1oWAzXpb4ym8yB+icJj0w==
